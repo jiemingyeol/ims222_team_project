@@ -3,7 +3,8 @@
 A small 5-page website about a favorite music album.
 Course project for IMS222 (Intro to Interaction Design).
 
-- **Live site:** `https://USERNAME.github.io/REPO/` (fill in after the repo is created)
+- **Live site:** https://jiemingyeol.github.io/ims222_team_project/
+- **Repository:** https://github.com/jiemingyeol/ims222_team_project
 - **Team:** 4 members
 
 ## Pages
