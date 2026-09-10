@@ -2,8 +2,9 @@
    IMS222 Team Project - Shared Stylesheet
    OWNER manages this file. Team members: do not edit.
 
-   Only the bare basics live here. Everything else (layout,
-   colors, fonts, spacing) we write ourselves as we go.
+   Only the shared frame (top menu bar + footer) is styled
+   here so every page matches. Page content inside <main> we
+   style ourselves as we go.
    ========================================================= */
 
 *,
@@ -21,4 +22,51 @@ img {
   height: auto;
 }
 
-/* Add shared styles below as the team decides on them. */
+/* --- Top menu bar (shared header) --- */
+header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+header .logo a {
+  font-weight: 700;
+  font-size: 1.25rem;
+  text-decoration: none;
+  color: inherit;
+}
+
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav a {
+  text-decoration: none;
+  color: inherit;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* --- Footer (shared) --- */
+footer {
+  padding: 2rem 1.5rem;
+  color: #666666;
+  font-size: 0.9rem;
+}
+
+footer hr {
+  border: none;
+  border-top: 1px solid #e5e5e5;
+  margin-bottom: 1rem;
+}
