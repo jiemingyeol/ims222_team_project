@@ -8,7 +8,7 @@ Course project for IMS222 (Intro to Interaction Design).
 
 ## Pages
 
-| Page     | File            | Owner   |
+| Page     | File            | Editor  |
 |----------|-----------------|---------|
 | Home     | `index.html`    | MJ      |
 | Info     | `info.html`     | Carson  |
@@ -16,7 +16,7 @@ Course project for IMS222 (Intro to Interaction Design).
 | About Us | `about.html`    | Morgan  |
 | Contact  | `contact.html`  | Owen    |
 
-**Owner only** (nobody else edits these):
+**MJ only** (nobody else edits these):
 `style.css`, plus the `[SHARED HEADER]` and `[SHARED FOOTER]` blocks inside every HTML file.
 
 `template.html` is a reference copy of the page shape. Do not link to it from the site.
@@ -49,7 +49,7 @@ You do not install anything. You only use github.com in your browser.
 ### If something goes wrong
 
 - **"Can't commit, the file has changed"** - refresh the page and redo your edit. (Someone edited the same file at the same time. Rare, since each person has their own page.)
-- **The live site looks broken after your commit** - tell the team chat. The owner can roll it back.
+- **The live site looks broken after your commit** - tell the team chat. MJ can roll it back.
 
 ## Status
 
