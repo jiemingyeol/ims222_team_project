@@ -10,11 +10,11 @@ Course project for IMS222 (Intro to Interaction Design).
 
 | Page     | File            | Owner   |
 |----------|-----------------|---------|
-| Home     | `index.html`    | (owner) |
-| Info     | `info.html`     | TBD     |
-| FaQ      | `faq.html`      | TBD     |
-| About Us | `about.html`    | TBD     |
-| Contact  | `contact.html`  | TBD     |
+| Home     | `index.html`    | MJ      |
+| Info     | `info.html`     | Carson  |
+| FaQ      | `faq.html`      | Owen    |
+| About Us | `about.html`    | Morgan  |
+| Contact  | `contact.html`  | Owen    |
 
 **Owner only** (nobody else edits these):
 `style.css`, plus the `[SHARED HEADER]` and `[SHARED FOOTER]` blocks inside every HTML file.
@@ -50,14 +50,6 @@ You do not install anything. You only use github.com in your browser.
 
 - **"Can't commit, the file has changed"** - refresh the page and redo your edit. (Someone edited the same file at the same time. Rare, since each person has their own page.)
 - **The live site looks broken after your commit** - tell the team chat. The owner can roll it back.
-
-## Setup checklist (owner)
-
-- [ ] Create the GitHub repository and push this folder.
-- [ ] Settings -> Collaborators -> invite the 3 team members by GitHub username.
-- [ ] Settings -> Pages -> Source: `main` / `/ (root)` -> Save. Share the live URL.
-- [ ] Replace `[Website Name]` everywhere once the site name is decided.
-- [ ] Add the real sections to each page after the wireframe meeting.
 
 ## Status
 
