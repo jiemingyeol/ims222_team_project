@@ -19,8 +19,6 @@ Course project for IMS222 (Intro to Interaction Design).
 **MJ only** (nobody else edits these):
 `style.css`, plus the `[SHARED HEADER]` and `[SHARED FOOTER]` blocks inside every HTML file.
 
-`template.html` is a reference copy of the page shape. Do not link to it from the site.
-
 ## Images
 
 Each page has its own folder under `images/`. Put your page's images only in
