@@ -21,6 +21,28 @@ Course project for IMS222 (Intro to Interaction Design).
 
 `template.html` is a reference copy of the page shape. Do not link to it from the site.
 
+## Images
+
+Each page has its own folder under `images/`. Put your page's images only in
+your folder, so filenames never clash.
+
+| Folder             | For           | Editor  |
+|--------------------|---------------|---------|
+| `images/home/`     | `index.html`  | MJ      |
+| `images/info/`     | `info.html`   | Carson  |
+| `images/faq/`      | `faq.html`    | Owen    |
+| `images/about/`    | `about.html`  | Morgan  |
+| `images/contact/`  | `contact.html`| Owen    |
+| `images/shared/`   | every page    | MJ      |
+
+To add an image on github.com: open your folder, **Add file -> Upload files**,
+drag the image in, **Commit changes**. Then link it in your page:
+
+    <img src="images/about/your-file.jpg" alt="describe the image">
+
+Naming: lowercase, hyphens instead of spaces, no Korean, lowercase extension
+(`.jpg` not `.JPG`). Compress large photos before uploading.
+
 ## How to edit (team members)
 
 You do not install anything. You only use github.com in your browser.
