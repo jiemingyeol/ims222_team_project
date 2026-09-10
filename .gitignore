@@ -1,0 +1,12 @@
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor / IDE
+.vscode/
+.idea/
+
+# Google Drive sync leftovers
+*.tmp.drivedownload
+*.tmp.driveupload
