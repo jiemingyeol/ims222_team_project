@@ -1,4 +1,4 @@
-# [Website Name]
+# The Daily Aux
 
 A small 5-page website about a favorite music album.
 Course project for IMS222 (Intro to Interaction Design).
