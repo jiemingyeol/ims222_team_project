@@ -27,11 +27,57 @@
   <!-- [YOUR WORKSPACE] Edit only inside this <main> tag.       -->
   
   <main>
-    <section>
-      <h1>Home</h1>
-      <p>Placeholder. Replace this after the wireframe is decided.</p>
-      <p></p>
+
+    <!-- ============================================================ -->
+    <!-- INTRO                                                         -->
+    <!-- Sample placeholder copy only - real text comes later.        -->
+    <!-- ============================================================ -->
+    <section class="intro">
+      <p class="intro-eyebrow">The Daily Aux &bull; Favorite Albums</p>
+      <h1 class="intro-headline">Twelve artists. Twelve albums. One playlist we can't stop replaying.</h1>
+      <p class="intro-text">Sample intro sentence - swap in the real one later.</p>
     </section>
+
+    <!-- ============================================================ -->
+    <!-- ARTIST SPOTLIGHT                                              -->
+    <!-- Arrows need home.js (not added yet) to actually swap the     -->
+    <!-- photo / vinyl label / text. Image paths below are            -->
+    <!-- placeholders - real files go in images/home/ later.          -->
+    <!-- ============================================================ -->
+    <section class="spotlight" aria-label="Featured artist">
+
+      <div class="spotlight-stage">
+        <button type="button" class="spotlight-arrow spotlight-prev" aria-label="Previous artist">&#8249;</button>
+
+        <figure class="spotlight-photo">
+          <img id="spotlight-photo" src="images/home/artist-01.jpg" alt="Sample Artist Name">
+        </figure>
+
+        <button type="button" class="spotlight-arrow spotlight-next" aria-label="Next artist">&#8250;</button>
+      </div>
+
+      <p class="spotlight-counter">
+        <span id="spotlight-current">1</span> / <span id="spotlight-total">12</span>
+      </p>
+
+      <div class="spotlight-detail">
+
+        <div class="vinyl">
+          <div class="vinyl-record">
+            <img id="vinyl-label" class="vinyl-label" src="images/home/album-01.jpg" alt="Sample Album Title cover">
+          </div>
+        </div>
+
+        <div class="spotlight-text">
+          <h2 id="spotlight-album-title">Sample Album Title</h2>
+          <h3 id="spotlight-artist-name">Sample Artist Name</h3>
+          <p id="spotlight-bio">Sample one or two sentence artist bio goes here.</p>
+        </div>
+
+      </div>
+
+    </section>
+
   </main>
   <!-- ======================================================== -->
 
