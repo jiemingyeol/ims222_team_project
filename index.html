@@ -5,6 +5,114 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>The Daily Aux | Home</title>
   <link rel="stylesheet" href="style.css">
+
+  <!-- Home page only. style.css stays the shared frame (header/footer); -->
+  <!-- each page styles its own <main> content here. -->
+  <style>
+    .intro {
+      padding: 2rem 1.5rem;
+    }
+
+    .intro-eyebrow {
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-size: 0.8rem;
+      color: #666;
+      margin: 0 0 0.5rem;
+    }
+
+    .intro-headline {
+      font-size: clamp(1.75rem, 4vw, 3rem);
+      line-height: 1.1;
+      margin: 0 0 0.75rem;
+    }
+
+    .intro-text {
+      max-width: 40em;
+      color: #444;
+      margin: 0;
+    }
+
+    .spotlight {
+      padding: 1rem 1.5rem 3rem;
+    }
+
+    .spotlight-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 2rem;
+    }
+
+    .spotlight-card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 0.75rem;
+    }
+
+    .spotlight-photo {
+      margin: 0;
+      width: 100%;
+      aspect-ratio: 3 / 2;
+      overflow: hidden;
+      border-radius: 4px;
+      background: #eeeeee;
+    }
+
+    .spotlight-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* Vinyl record - pure CSS, spins on its own. No JS. */
+    .vinyl {
+      width: 140px;
+      height: 140px;
+    }
+
+    .vinyl-record {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      background: repeating-radial-gradient(circle, #222222 0, #222222 2px, #000000 3px, #000000 5px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      animation: vinyl-spin 6s linear infinite;
+    }
+
+    .vinyl-label {
+      width: 45%;
+      height: 45%;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    @keyframes vinyl-spin {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+
+    .spotlight-text h2 {
+      margin: 0;
+      font-size: 1.05rem;
+    }
+
+    .spotlight-text h3 {
+      margin: 0;
+      font-weight: 400;
+      color: #666666;
+      font-size: 0.9rem;
+    }
+
+    .spotlight-text p {
+      margin: 0.25rem 0 0;
+      font-size: 0.85rem;
+      color: #444444;
+    }
+  </style>
 </head>
 <body>
 
@@ -25,7 +133,7 @@
 
   <!-- ======================================================== -->
   <!-- [YOUR WORKSPACE] Edit only inside this <main> tag.       -->
-  
+
   <main>
 
     <!-- ============================================================ -->
@@ -39,43 +147,211 @@
     </section>
 
     <!-- ============================================================ -->
-    <!-- ARTIST SPOTLIGHT                                              -->
-    <!-- Arrows need home.js (not added yet) to actually swap the     -->
-    <!-- photo / vinyl label / text. Image paths below are            -->
-    <!-- placeholders - real files go in images/home/ later.          -->
+    <!-- ARTIST SPOTLIGHT - static grid, HTML+CSS only, no JS yet.    -->
+    <!-- All 12 artists show at once, no arrows or navigation. Each   -->
+    <!-- card has its own vinyl that spins on its own (pure CSS       -->
+    <!-- animation) with that artist's album cover as the label.      -->
+    <!-- Later, once JS is allowed, this becomes a one-at-a-time      -->
+    <!-- carousel with arrows - same cards, reused.                   -->
+    <!-- Bios and images below are placeholders - real files go in   -->
+    <!-- images/home/ (artist-01.jpg..12, album-01.jpg..12) later.   -->
     <!-- ============================================================ -->
-    <section class="spotlight" aria-label="Featured artist">
+    <section class="spotlight" aria-label="Featured artists">
+      <div class="spotlight-grid">
 
-      <div class="spotlight-stage">
-        <button type="button" class="spotlight-arrow spotlight-prev" aria-label="Previous artist">&#8249;</button>
-
-        <figure class="spotlight-photo">
-          <img id="spotlight-photo" src="images/home/artist-01.jpg" alt="Sample Artist Name">
-        </figure>
-
-        <button type="button" class="spotlight-arrow spotlight-next" aria-label="Next artist">&#8250;</button>
-      </div>
-
-      <p class="spotlight-counter">
-        <span id="spotlight-current">1</span> / <span id="spotlight-total">12</span>
-      </p>
-
-      <div class="spotlight-detail">
-
-        <div class="vinyl">
-          <div class="vinyl-record">
-            <img id="vinyl-label" class="vinyl-label" src="images/home/album-01.jpg" alt="Sample Album Title cover">
+        <article class="spotlight-card">
+          <figure class="spotlight-photo">
+            <img src="images/home/artist-01.jpg" alt="Michael Jackson">
+          </figure>
+          <div class="vinyl">
+            <div class="vinyl-record">
+              <img class="vinyl-label" src="images/home/album-01.jpg" alt="Thriller cover">
+            </div>
           </div>
-        </div>
+          <div class="spotlight-text">
+            <h2>Thriller</h2>
+            <h3>Michael Jackson</h3>
+            <p>Sample bio - swap in the real one later.</p>
+          </div>
+        </article>
 
-        <div class="spotlight-text">
-          <h2 id="spotlight-album-title">Sample Album Title</h2>
-          <h3 id="spotlight-artist-name">Sample Artist Name</h3>
-          <p id="spotlight-bio">Sample one or two sentence artist bio goes here.</p>
-        </div>
+        <article class="spotlight-card">
+          <figure class="spotlight-photo">
+            <img src="images/home/artist-02.jpg" alt="Coldplay">
+          </figure>
+          <div class="vinyl">
+            <div class="vinyl-record">
+              <img class="vinyl-label" src="images/home/album-02.jpg" alt="A Rush of Blood to the Head cover">
+            </div>
+          </div>
+          <div class="spotlight-text">
+            <h2>A Rush of Blood to the Head</h2>
+            <h3>Coldplay</h3>
+            <p>Sample bio - swap in the real one later.</p>
+          </div>
+        </article>
+
+        <article class="spotlight-card">
+          <figure class="spotlight-photo">
+            <img src="images/home/artist-03.jpg" alt="Calvin Harris">
+          </figure>
+          <div class="vinyl">
+            <div class="vinyl-record">
+              <img class="vinyl-label" src="images/home/album-03.jpg" alt="Motion cover">
+            </div>
+          </div>
+          <div class="spotlight-text">
+            <h2>Motion</h2>
+            <h3>Calvin Harris</h3>
+            <p>Sample bio - swap in the real one later.</p>
+          </div>
+        </article>
+
+        <article class="spotlight-card">
+          <figure class="spotlight-photo">
+            <img src="images/home/artist-04.jpg" alt="Billy Joel">
+          </figure>
+          <div class="vinyl">
+            <div class="vinyl-record">
+              <img class="vinyl-label" src="images/home/album-04.jpg" alt="Glass Houses cover">
+            </div>
+          </div>
+          <div class="spotlight-text">
+            <h2>Glass Houses</h2>
+            <h3>Billy Joel</h3>
+            <p>Sample bio - swap in the real one later.</p>
+          </div>
+        </article>
+
+        <article class="spotlight-card">
+          <figure class="spotlight-photo">
+            <img src="images/home/artist-05.jpg" alt="J.Cole">
+          </figure>
+          <div class="vinyl">
+            <div class="vinyl-record">
+              <img class="vinyl-label" src="images/home/album-05.jpg" alt="Friday Night Lights cover">
+            </div>
+          </div>
+          <div class="spotlight-text">
+            <h2>Friday Night Lights</h2>
+            <h3>J.Cole</h3>
+            <p>Sample bio - swap in the real one later.</p>
+          </div>
+        </article>
+
+        <article class="spotlight-card">
+          <figure class="spotlight-photo">
+            <img src="images/home/artist-06.jpg" alt="Tame Impala">
+          </figure>
+          <div class="vinyl">
+            <div class="vinyl-record">
+              <img class="vinyl-label" src="images/home/album-06.jpg" alt="Currents cover">
+            </div>
+          </div>
+          <div class="spotlight-text">
+            <h2>Currents</h2>
+            <h3>Tame Impala</h3>
+            <p>Sample bio - swap in the real one later.</p>
+          </div>
+        </article>
+
+        <article class="spotlight-card">
+          <figure class="spotlight-photo">
+            <img src="images/home/artist-07.jpg" alt="Lauryn Hill">
+          </figure>
+          <div class="vinyl">
+            <div class="vinyl-record">
+              <img class="vinyl-label" src="images/home/album-07.jpg" alt="The Miseducation of Lauryn Hill cover">
+            </div>
+          </div>
+          <div class="spotlight-text">
+            <h2>The Miseducation of Lauryn Hill</h2>
+            <h3>Lauryn Hill</h3>
+            <p>Sample bio - swap in the real one later.</p>
+          </div>
+        </article>
+
+        <article class="spotlight-card">
+          <figure class="spotlight-photo">
+            <img src="images/home/artist-08.jpg" alt="Pink Floyd">
+          </figure>
+          <div class="vinyl">
+            <div class="vinyl-record">
+              <img class="vinyl-label" src="images/home/album-08.jpg" alt="Dark Side of the Moon cover">
+            </div>
+          </div>
+          <div class="spotlight-text">
+            <h2>Dark Side of the Moon</h2>
+            <h3>Pink Floyd</h3>
+            <p>Sample bio - swap in the real one later.</p>
+          </div>
+        </article>
+
+        <article class="spotlight-card">
+          <figure class="spotlight-photo">
+            <img src="images/home/artist-09.jpg" alt="Amy Winehouse">
+          </figure>
+          <div class="vinyl">
+            <div class="vinyl-record">
+              <img class="vinyl-label" src="images/home/album-09.jpg" alt="Back to Black cover">
+            </div>
+          </div>
+          <div class="spotlight-text">
+            <h2>Back to Black</h2>
+            <h3>Amy Winehouse</h3>
+            <p>Sample bio - swap in the real one later.</p>
+          </div>
+        </article>
+
+        <article class="spotlight-card">
+          <figure class="spotlight-photo">
+            <img src="images/home/artist-10.jpg" alt="The Black Skirt">
+          </figure>
+          <div class="vinyl">
+            <div class="vinyl-record">
+              <img class="vinyl-label" src="images/home/album-10.jpg" alt="THIRSTY cover">
+            </div>
+          </div>
+          <div class="spotlight-text">
+            <h2>THIRSTY</h2>
+            <h3>The Black Skirt</h3>
+            <p>Sample bio - swap in the real one later.</p>
+          </div>
+        </article>
+
+        <article class="spotlight-card">
+          <figure class="spotlight-photo">
+            <img src="images/home/artist-11.jpg" alt="Frank Ocean">
+          </figure>
+          <div class="vinyl">
+            <div class="vinyl-record">
+              <img class="vinyl-label" src="images/home/album-11.jpg" alt="channel ORANGE cover">
+            </div>
+          </div>
+          <div class="spotlight-text">
+            <h2>channel ORANGE</h2>
+            <h3>Frank Ocean</h3>
+            <p>Sample bio - swap in the real one later.</p>
+          </div>
+        </article>
+
+        <article class="spotlight-card">
+          <figure class="spotlight-photo">
+            <img src="images/home/artist-12.jpg" alt="SYSTEM SEOUL">
+          </figure>
+          <div class="vinyl">
+            <div class="vinyl-record">
+              <img class="vinyl-label" src="images/home/album-12.jpg" alt="SS-POP 3 cover">
+            </div>
+          </div>
+          <div class="spotlight-text">
+            <h2>SS-POP 3</h2>
+            <h3>SYSTEM SEOUL</h3>
+            <p>Sample bio - swap in the real one later.</p>
+          </div>
+        </article>
 
       </div>
-
     </section>
 
   </main>
