@@ -39,7 +39,7 @@
 
     .spotlight-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      grid-template-columns: repeat(3, 1fr);
       gap: 2rem;
     }
 
@@ -154,18 +154,20 @@
     <!-- Later, once JS is allowed, this becomes a one-at-a-time      -->
     <!-- carousel with arrows - same cards, reused.                   -->
     <!-- Bios and images below are placeholders - real files go in   -->
-    <!-- images/home/ (artist-01.jpg..12, album-01.jpg..12) later.   -->
+    <!-- images/home/ as artist-NN-code.jpg / album-NN-code.jpg,      -->
+    <!-- where NN is the order number and code is a 2-letter artist  -->
+    <!-- code (mj, cp, ch, bj, jc, ti, lh, pf, aw, bs, fo, ss).       -->
     <!-- ============================================================ -->
     <section class="spotlight" aria-label="Featured artists">
       <div class="spotlight-grid">
 
         <article class="spotlight-card">
           <figure class="spotlight-photo">
-            <img src="images/home/artist-01.jpg" alt="Michael Jackson">
+            <img src="images/home/artist-01-mj.jpg" alt="Michael Jackson">
           </figure>
           <div class="vinyl">
             <div class="vinyl-record">
-              <img class="vinyl-label" src="images/home/album-01.jpg" alt="Thriller cover">
+              <img class="vinyl-label" src="images/home/album-01-mj.jpg" alt="Thriller cover">
             </div>
           </div>
           <div class="spotlight-text">
@@ -177,11 +179,11 @@
 
         <article class="spotlight-card">
           <figure class="spotlight-photo">
-            <img src="images/home/artist-02.jpg" alt="Coldplay">
+            <img src="images/home/artist-02-cp.jpg" alt="Coldplay">
           </figure>
           <div class="vinyl">
             <div class="vinyl-record">
-              <img class="vinyl-label" src="images/home/album-02.jpg" alt="A Rush of Blood to the Head cover">
+              <img class="vinyl-label" src="images/home/album-02-cp.jpg" alt="A Rush of Blood to the Head cover">
             </div>
           </div>
           <div class="spotlight-text">
@@ -193,11 +195,11 @@
 
         <article class="spotlight-card">
           <figure class="spotlight-photo">
-            <img src="images/home/artist-03.jpg" alt="Calvin Harris">
+            <img src="images/home/artist-03-ch.jpg" alt="Calvin Harris">
           </figure>
           <div class="vinyl">
             <div class="vinyl-record">
-              <img class="vinyl-label" src="images/home/album-03.jpg" alt="Motion cover">
+              <img class="vinyl-label" src="images/home/album-03-ch.jpg" alt="Motion cover">
             </div>
           </div>
           <div class="spotlight-text">
@@ -209,11 +211,11 @@
 
         <article class="spotlight-card">
           <figure class="spotlight-photo">
-            <img src="images/home/artist-04.jpg" alt="Billy Joel">
+            <img src="images/home/artist-04-bj.jpg" alt="Billy Joel">
           </figure>
           <div class="vinyl">
             <div class="vinyl-record">
-              <img class="vinyl-label" src="images/home/album-04.jpg" alt="Glass Houses cover">
+              <img class="vinyl-label" src="images/home/album-04-bj.jpg" alt="Glass Houses cover">
             </div>
           </div>
           <div class="spotlight-text">
@@ -225,11 +227,11 @@
 
         <article class="spotlight-card">
           <figure class="spotlight-photo">
-            <img src="images/home/artist-05.jpg" alt="J.Cole">
+            <img src="images/home/artist-05-jc.jpg" alt="J.Cole">
           </figure>
           <div class="vinyl">
             <div class="vinyl-record">
-              <img class="vinyl-label" src="images/home/album-05.jpg" alt="Friday Night Lights cover">
+              <img class="vinyl-label" src="images/home/album-05-jc.jpg" alt="Friday Night Lights cover">
             </div>
           </div>
           <div class="spotlight-text">
@@ -241,11 +243,11 @@
 
         <article class="spotlight-card">
           <figure class="spotlight-photo">
-            <img src="images/home/artist-06.jpg" alt="Tame Impala">
+            <img src="images/home/artist-06-ti.jpg" alt="Tame Impala">
           </figure>
           <div class="vinyl">
             <div class="vinyl-record">
-              <img class="vinyl-label" src="images/home/album-06.jpg" alt="Currents cover">
+              <img class="vinyl-label" src="images/home/album-06-ti.jpg" alt="Currents cover">
             </div>
           </div>
           <div class="spotlight-text">
@@ -257,11 +259,11 @@
 
         <article class="spotlight-card">
           <figure class="spotlight-photo">
-            <img src="images/home/artist-07.jpg" alt="Lauryn Hill">
+            <img src="images/home/artist-07-lh.jpg" alt="Lauryn Hill">
           </figure>
           <div class="vinyl">
             <div class="vinyl-record">
-              <img class="vinyl-label" src="images/home/album-07.jpg" alt="The Miseducation of Lauryn Hill cover">
+              <img class="vinyl-label" src="images/home/album-07-lh.jpg" alt="The Miseducation of Lauryn Hill cover">
             </div>
           </div>
           <div class="spotlight-text">
@@ -273,11 +275,11 @@
 
         <article class="spotlight-card">
           <figure class="spotlight-photo">
-            <img src="images/home/artist-08.jpg" alt="Pink Floyd">
+            <img src="images/home/artist-08-pf.jpg" alt="Pink Floyd">
           </figure>
           <div class="vinyl">
             <div class="vinyl-record">
-              <img class="vinyl-label" src="images/home/album-08.jpg" alt="Dark Side of the Moon cover">
+              <img class="vinyl-label" src="images/home/album-08-pf.jpg" alt="Dark Side of the Moon cover">
             </div>
           </div>
           <div class="spotlight-text">
@@ -289,11 +291,11 @@
 
         <article class="spotlight-card">
           <figure class="spotlight-photo">
-            <img src="images/home/artist-09.jpg" alt="Amy Winehouse">
+            <img src="images/home/artist-09-aw.jpg" alt="Amy Winehouse">
           </figure>
           <div class="vinyl">
             <div class="vinyl-record">
-              <img class="vinyl-label" src="images/home/album-09.jpg" alt="Back to Black cover">
+              <img class="vinyl-label" src="images/home/album-09-aw.jpg" alt="Back to Black cover">
             </div>
           </div>
           <div class="spotlight-text">
@@ -305,11 +307,11 @@
 
         <article class="spotlight-card">
           <figure class="spotlight-photo">
-            <img src="images/home/artist-10.jpg" alt="The Black Skirt">
+            <img src="images/home/artist-10-bs.jpg" alt="The Black Skirt">
           </figure>
           <div class="vinyl">
             <div class="vinyl-record">
-              <img class="vinyl-label" src="images/home/album-10.jpg" alt="THIRSTY cover">
+              <img class="vinyl-label" src="images/home/album-10-bs.jpg" alt="THIRSTY cover">
             </div>
           </div>
           <div class="spotlight-text">
@@ -321,11 +323,11 @@
 
         <article class="spotlight-card">
           <figure class="spotlight-photo">
-            <img src="images/home/artist-11.jpg" alt="Frank Ocean">
+            <img src="images/home/artist-11-fo.jpg" alt="Frank Ocean">
           </figure>
           <div class="vinyl">
             <div class="vinyl-record">
-              <img class="vinyl-label" src="images/home/album-11.jpg" alt="channel ORANGE cover">
+              <img class="vinyl-label" src="images/home/album-11-fo.jpg" alt="channel ORANGE cover">
             </div>
           </div>
           <div class="spotlight-text">
@@ -337,11 +339,11 @@
 
         <article class="spotlight-card">
           <figure class="spotlight-photo">
-            <img src="images/home/artist-12.jpg" alt="SYSTEM SEOUL">
+            <img src="images/home/artist-12-ss.jpg" alt="SYSTEM SEOUL">
           </figure>
           <div class="vinyl">
             <div class="vinyl-record">
-              <img class="vinyl-label" src="images/home/album-12.jpg" alt="SS-POP 3 cover">
+              <img class="vinyl-label" src="images/home/album-12-ss.jpg" alt="SS-POP 3 cover">
             </div>
           </div>
           <div class="spotlight-text">
