@@ -34,7 +34,8 @@
     }
 
     .spotlight {
-      padding: 1rem 1.5rem 3rem;
+      padding: 2rem 1.5rem 3rem;
+      border-top: 1px solid #e5e5e5;
     }
 
     .spotlight-grid {
@@ -43,12 +44,33 @@
       gap: 2rem;
     }
 
+    @media (max-width: 700px) {
+      .spotlight-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 420px) {
+      .spotlight-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
     .spotlight-card {
       display: flex;
       flex-direction: column;
       align-items: center;
       text-align: center;
       gap: 0.75rem;
+      padding: 1rem;
+      border-radius: 8px;
+      background: #ffffff;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .spotlight-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
     }
 
     .spotlight-photo {
@@ -73,14 +95,26 @@
     }
 
     .vinyl-record {
+      position: relative;
       width: 100%;
       height: 100%;
       border-radius: 50%;
       background: repeating-radial-gradient(circle, #222222 0, #222222 2px, #000000 3px, #000000 5px);
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
       display: flex;
       align-items: center;
       justify-content: center;
       animation: vinyl-spin 6s linear infinite;
+    }
+
+    /* Glossy highlight sitting on top of the record + label */
+    .vinyl-record::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-radius: 50%;
+      background: radial-gradient(circle at 35% 30%, rgba(255, 255, 255, 0.25), transparent 55%);
+      pointer-events: none;
     }
 
     .vinyl-label {
@@ -142,7 +176,7 @@
     <!-- ============================================================ -->
     <section class="intro">
       <p class="intro-eyebrow">The Daily Aux &bull; Favorite Albums</p>
-      <h1 class="intro-headline">Twelve artists. Twelve albums. One playlist we can't stop replaying.</h1>
+      <h1 class="intro-headline">Twelve artists. Twelve albums.</h1>
       <p class="intro-text">Sample intro sentence - swap in the real one later.</p>
     </section>
 

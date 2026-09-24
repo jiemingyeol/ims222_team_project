@@ -13,13 +13,51 @@
   box-sizing: border-box;
 }
 
+:root {
+  --color-accent: #b5502e;
+  --color-text: #1a1a1a;
+  --color-muted: #666666;
+
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+}
+
 body {
   margin: 0;
+  color: var(--color-text);
 }
 
 img {
   max-width: 100%;
   height: auto;
+}
+
+/* --- Heading defaults (applies everywhere, incl. each page's <main>) --- */
+h1,
+h2,
+h3 {
+  margin: 0 0 0.5em;
+  font-weight: 700;
+  line-height: 1.15;
+}
+
+h1 {
+  font-size: 2.25rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+h3 {
+  font-size: 1.125rem;
+}
+
+/* --- Body link color (nav links keep their own style below) --- */
+main a {
+  color: var(--color-accent);
 }
 
 /* --- Top menu bar (shared header) --- */
@@ -28,10 +66,15 @@ header {
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  padding: 1rem;
+  padding: var(--space-md) var(--space-lg);
+  background: #fafafa;
+  border-bottom: 1px solid #e5e5e5;
 }
 
 header .logo a {
+  font-weight: 700;
+  font-size: 1.25rem;
+  letter-spacing: 0.02em;
   text-decoration: none;
   color: inherit;
 }
@@ -54,16 +97,22 @@ nav a:hover {
   text-decoration: underline;
 }
 
+/* Current page, marked with aria-current="page" on the matching link */
+nav a[aria-current="page"] {
+  color: var(--color-accent);
+  font-weight: 700;
+}
+
 main {
-  padding: 1rem;
+  padding: var(--space-lg);
 }
 /* --- Footer (shared) --- */
 footer {
-  color: #666666;
+  color: var(--color-muted);
 }
 
 footer p {
-  padding: 1rem;
+  padding: var(--space-md) var(--space-lg);
 }
 
 footer hr {
