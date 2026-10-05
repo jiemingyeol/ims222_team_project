@@ -1,0 +1,67 @@
+/* =========================================================
+   The Daily Aux - About Us Page Styles
+   Styles exclusively for the <main> workspace on about.html
+   ========================================================= */
+
+/* Top Heading Section */
+.about-hero {
+  margin-bottom: var(--space-xl);
+  padding-bottom: var(--space-md);
+  border-bottom: 2px solid var(--color-accent);
+}
+
+.about-hero p {
+  font-size: 1.1rem;
+  color: var(--color-muted);
+  line-height: 1.5;
+}
+
+/* 2-Column Responsive Grid Layout */
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--space-lg);
+  margin-bottom: var(--space-xl);
+}
+
+/* Member Card Styling */
+.team-member {
+  background-color: #fafafa;
+  border: 1px solid #e5e5e5;
+  border-radius: 8px;
+  padding: var(--space-lg);
+}
+
+.team-member h2 {
+  color: var(--color-text);
+  margin-bottom: var(--space-sm);
+}
+
+.role {
+  color: var(--color-muted);
+  font-style: italic;
+  font-size: 0.95rem;
+  margin-top: 0;
+  margin-bottom: var(--space-md);
+}
+
+.bio {
+  line-height: 1.5;
+  margin-bottom: var(--space-md);
+}
+
+/* Favorites Lists */
+.team-member ul {
+  padding-left: var(--space-md);
+  margin: var(--space-sm) 0;
+}
+
+.team-member ul ul {
+  margin-top: var(--space-sm);
+  margin-bottom: var(--space-sm);
+}
+
+.team-member li {
+  margin-bottom: var(--space-sm);
+  line-height: 1.4;
+}
