@@ -1,4 +1,4 @@
-# FaQ images (Owen)
+# FAQ images (Owen)
 
 Put images used on `faq.html` here.
 

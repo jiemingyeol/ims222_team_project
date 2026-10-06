@@ -1,21 +1,30 @@
 # The Daily Aux
 
-A small 5-page website about a favorite music album.
-Course project for IMS222 (Intro to Interaction Design).
+A small 5-page music website for IMS222 (Intro to Interaction Design): our twelve favorite albums, music news, an FAQ, who we are, and a contact form.
 
 - **Live site:** https://jiemingyeol.github.io/ims222_team_project/
 - **Repository:** https://github.com/jiemingyeol/ims222_team_project
-- **Team:** 4 members
+- **Team:** Team Kode Kidz (4 members)
 
 ## Pages
 
-| Page     | File            | Editor  |
-|----------|-----------------|---------|
-| Home     | `index.html`    | MJ      |
-| Info     | `info.html`     | Carson  |
-| FaQ      | `faq.html`      | Owen    |
-| About Us | `about.html`    | Morgan  |
-| Contact  | `contact.html`  | Owen    |
+| Page     | HTML           | Page styles   | Editor |
+|----------|----------------|---------------|--------|
+| Home     | `index.html`   | `index.css`   | MJ     |
+| Info     | `info.html`    | `info.css`    | Carson |
+| FAQ      | `faq.html`     | -             | Owen   |
+| About Us | `about.html`   | `about.css`   | Morgan |
+| Contact  | `contact.html` | `contact.css` | Owen   |
+
+## Styles
+
+`style.css` holds everything shared: fonts, colors, headings, page width, header, footer, and the card look. Every page loads it first.
+
+If a page needs extra styling, give it its own CSS file named after the page (for example `info.css`) and link it in `<head>` right after `style.css`:
+
+    <link rel="stylesheet" href="info.css">
+
+Use the variables from `style.css` (for example `var(--color-accent)`, `var(--space-md)`) so pages stay consistent.
 
 **MJ only** (nobody else edits these):
 `style.css`, plus the `[SHARED HEADER]` and `[SHARED FOOTER]` blocks inside every HTML file.
@@ -42,6 +51,8 @@ drag the image in, **Commit changes**. Then link it in your page:
 Naming: lowercase, hyphens instead of spaces, no Korean, lowercase extension
 (`.jpg` not `.JPG`). Compress large photos before uploading.
 
+Image credits for the Home page are in `images/home/README.md`.
+
 ## How to edit (team members)
 
 You do not install anything. You only use github.com in your browser.
@@ -53,10 +64,12 @@ You do not install anything. You only use github.com in your browser.
 5. Scroll down and click **Commit changes**, then **Commit changes** again in the popup.
 6. Wait about 1 minute, then refresh the live site to see your change.
 
+To change how your page looks, edit your page's CSS file the same way.
+
 ### Do
 
-- Edit only your own page.
-- Edit only inside `<main>` ... `</main>`.
+- Edit only your own page and your own page's CSS file.
+- In your HTML file, edit only inside `<main>` ... `</main>`.
 - Change the text only. Leave the tags themselves (`<main>`, `</main>`, `</body>`, `</html>`) exactly as they are.
 - Make small changes and commit often.
 
@@ -71,8 +84,3 @@ You do not install anything. You only use github.com in your browser.
 
 - **"Can't commit, the file has changed"** - refresh the page and redo your edit. (Someone edited the same file at the same time. Rare, since each person has their own page.)
 - **The live site looks broken after your commit** - tell the team chat. MJ can roll it back.
-
-## Status
-
-The layout and wireframe are **not decided yet**. The HTML files contain only
-placeholder structure. Real content is added after the wireframe meeting.

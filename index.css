@@ -1,0 +1,103 @@
+.spotlight-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+@media (max-width: 700px) {
+  .spotlight-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 420px) {
+  .spotlight-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.spotlight-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.spotlight-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+}
+
+.spotlight-photo {
+  margin: 0;
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  overflow: hidden;
+  border-radius: 4px;
+  background: var(--color-border);
+}
+
+.spotlight-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.vinyl {
+  width: 140px;
+  height: 140px;
+}
+
+.vinyl-record {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: repeating-radial-gradient(circle, #222222 0, #222222 2px, #000000 3px, #000000 5px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+  animation: vinyl-spin 6s linear infinite;
+}
+
+.vinyl-record::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 30%, rgba(255, 255, 255, 0.25), transparent 55%);
+  pointer-events: none;
+}
+
+.vinyl-label {
+  width: 45%;
+  height: 45%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+@keyframes vinyl-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.spotlight-text h2 {
+  margin: 0;
+  font-size: 1.05rem;
+}
+
+.spotlight-text h3 {
+  margin: 0;
+  font-weight: 400;
+  font-size: 0.9rem;
+  color: var(--color-muted);
+}
+
+.spotlight-text p {
+  margin: 0.25rem 0 0;
+  font-size: 0.85rem;
+  color: var(--color-muted);
+}

@@ -5,148 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>The Daily Aux | Home</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="index.css">
 
-  <!-- Home page only. style.css stays the shared frame (header/footer); -->
-  <!-- each page styles its own <main> content here. -->
-  <style>
-    .intro {
-      padding: 2rem 1.5rem;
-    }
-
-    .intro-eyebrow {
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      font-size: 0.8rem;
-      color: #666;
-      margin: 0 0 0.5rem;
-    }
-
-    .intro-headline {
-      font-size: clamp(1.75rem, 4vw, 3rem);
-      line-height: 1.1;
-      margin: 0 0 0.75rem;
-    }
-
-    .intro-text {
-      max-width: 40em;
-      color: #444;
-      margin: 0;
-    }
-
-    .spotlight {
-      padding: 2rem 1.5rem 3rem;
-      border-top: 1px solid #e5e5e5;
-    }
-
-    .spotlight-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 2rem;
-    }
-
-    @media (max-width: 700px) {
-      .spotlight-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-    }
-
-    @media (max-width: 420px) {
-      .spotlight-grid {
-        grid-template-columns: 1fr;
-      }
-    }
-
-    .spotlight-card {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-      gap: 0.75rem;
-      padding: 1rem;
-      border-radius: 8px;
-      background: #ffffff;
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-    }
-
-    .spotlight-card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
-    }
-
-    .spotlight-photo {
-      margin: 0;
-      width: 100%;
-      aspect-ratio: 3 / 2;
-      overflow: hidden;
-      border-radius: 4px;
-      background: #eeeeee;
-    }
-
-    .spotlight-photo img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-
-    /* Vinyl record - pure CSS, spins on its own. No JS. */
-    .vinyl {
-      width: 140px;
-      height: 140px;
-    }
-
-    .vinyl-record {
-      position: relative;
-      width: 100%;
-      height: 100%;
-      border-radius: 50%;
-      background: repeating-radial-gradient(circle, #222222 0, #222222 2px, #000000 3px, #000000 5px);
-      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      animation: vinyl-spin 6s linear infinite;
-    }
-
-    /* Glossy highlight sitting on top of the record + label */
-    .vinyl-record::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      border-radius: 50%;
-      background: radial-gradient(circle at 35% 30%, rgba(255, 255, 255, 0.25), transparent 55%);
-      pointer-events: none;
-    }
-
-    .vinyl-label {
-      width: 45%;
-      height: 45%;
-      border-radius: 50%;
-      object-fit: cover;
-    }
-
-    @keyframes vinyl-spin {
-      from { transform: rotate(0deg); }
-      to { transform: rotate(360deg); }
-    }
-
-    .spotlight-text h2 {
-      margin: 0;
-      font-size: 1.05rem;
-    }
-
-    .spotlight-text h3 {
-      margin: 0;
-      font-weight: 400;
-      color: #666666;
-      font-size: 0.9rem;
-    }
-
-    .spotlight-text p {
-      margin: 0.25rem 0 0;
-      font-size: 0.85rem;
-      color: #444444;
-    }
-  </style>
 </head>
 <body>
 
@@ -158,7 +18,7 @@
     <nav>
       <ul>
         <li><a href="info.html">Info</a></li>
-        <li><a href="faq.html">FaQ</a></li>
+        <li><a href="faq.html">FAQ</a></li>
         <li><a href="about.html">About Us</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
@@ -170,32 +30,16 @@
 
   <main>
 
-    <!-- ============================================================ -->
-    <!-- INTRO                                                         -->
-    <!-- Sample placeholder copy only - real text comes later.        -->
-    <!-- ============================================================ -->
-    <section class="intro">
-      <p class="intro-eyebrow">The Daily Aux &bull; Favorite Albums</p>
-      <h1 class="intro-headline">Twelve artists. Twelve albums.</h1>
-      <p class="intro-text">Shared albums picked by the four of us.</p>
-    </section>
+    <p class="eyebrow">The Daily Aux &bull; Favorite Albums</p>
+    <h1>Twelve artists. Twelve albums.</h1>
+    <p class="subtitle">Shared albums picked by the four of us.</p>
+    <hr>
 
-    <!-- ============================================================ -->
-    <!-- ARTIST SPOTLIGHT - static grid, HTML+CSS only, no JS yet.    -->
-    <!-- All 12 artists show at once, no arrows or navigation. Each   -->
-    <!-- card has its own vinyl that spins on its own (pure CSS       -->
-    <!-- animation) with that artist's album cover as the label.      -->
-    <!-- Later, once JS is allowed, this becomes a one-at-a-time      -->
-    <!-- carousel with arrows - same cards, reused.                   -->
-    <!-- Bios and images below are placeholders - real files go in   -->
-    <!-- images/home/ as artist-NN-code.jpg / album-NN-code.jpg,      -->
-    <!-- where NN is the order number and code is a 2-letter artist  -->
-    <!-- code (mj, cp, ch, bj, jc, ti, lh, pf, aw, bs, fo, ss).       -->
-    <!-- ============================================================ -->
-    <section class="spotlight" aria-label="Featured artists">
+    <!-- Artist spotlight: image naming is explained in images/home/README.md -->
+    <section aria-label="Featured artists">
       <div class="spotlight-grid">
 
-        <article class="spotlight-card">
+        <article class="card spotlight-card">
           <figure class="spotlight-photo">
             <img src="images/home/artist-01-mj.jpg" alt="Michael Jackson">
           </figure>
@@ -211,7 +55,7 @@
           </div>
         </article>
 
-        <article class="spotlight-card">
+        <article class="card spotlight-card">
           <figure class="spotlight-photo">
             <img src="images/home/artist-02-cp.jpg" alt="Coldplay">
           </figure>
@@ -227,7 +71,7 @@
           </div>
         </article>
 
-        <article class="spotlight-card">
+        <article class="card spotlight-card">
           <figure class="spotlight-photo">
             <img src="images/home/artist-03-ch.jpg" alt="Calvin Harris">
           </figure>
@@ -243,7 +87,7 @@
           </div>
         </article>
 
-        <article class="spotlight-card">
+        <article class="card spotlight-card">
           <figure class="spotlight-photo">
             <img src="images/home/artist-04-bj.jpg" alt="Billy Joel">
           </figure>
@@ -259,9 +103,9 @@
           </div>
         </article>
 
-        <article class="spotlight-card">
+        <article class="card spotlight-card">
           <figure class="spotlight-photo">
-            <img src="images/home/artist-05-jc.jpg" alt="J.Cole">
+            <img src="images/home/artist-05-jc.jpg" alt="J. Cole">
           </figure>
           <div class="vinyl">
             <div class="vinyl-record">
@@ -270,12 +114,12 @@
           </div>
           <div class="spotlight-text">
             <h2>Friday Night Lights</h2>
-            <h3>J.Cole</h3>
-            <p>2010 &middot; Hip Hop (Mixtape)</p>
+            <h3>J. Cole</h3>
+            <p>2010 &middot; Hip-Hop (Mixtape)</p>
           </div>
         </article>
 
-        <article class="spotlight-card">
+        <article class="card spotlight-card">
           <figure class="spotlight-photo">
             <img src="images/home/artist-06-ti.jpg" alt="Tame Impala">
           </figure>
@@ -291,7 +135,7 @@
           </div>
         </article>
 
-        <article class="spotlight-card">
+        <article class="card spotlight-card">
           <figure class="spotlight-photo">
             <img src="images/home/artist-07-lh.jpg" alt="Lauryn Hill">
           </figure>
@@ -303,27 +147,27 @@
           <div class="spotlight-text">
             <h2>The Miseducation of Lauryn Hill</h2>
             <h3>Lauryn Hill</h3>
-            <p>1998 &middot; Neo-Soul / Hip Hop</p>
+            <p>1998 &middot; Neo-Soul / Hip-Hop</p>
           </div>
         </article>
 
-        <article class="spotlight-card">
+        <article class="card spotlight-card">
           <figure class="spotlight-photo">
             <img src="images/home/artist-08-pf.jpg" alt="Pink Floyd">
           </figure>
           <div class="vinyl">
             <div class="vinyl-record">
-              <img class="vinyl-label" src="images/home/album-08-pf.jpg" alt="Dark Side of the Moon cover">
+              <img class="vinyl-label" src="images/home/album-08-pf.jpg" alt="The Dark Side of the Moon cover">
             </div>
           </div>
           <div class="spotlight-text">
-            <h2>Dark Side of the Moon</h2>
+            <h2>The Dark Side of the Moon</h2>
             <h3>Pink Floyd</h3>
             <p>1973 &middot; Progressive Rock</p>
           </div>
         </article>
 
-        <article class="spotlight-card">
+        <article class="card spotlight-card">
           <figure class="spotlight-photo">
             <img src="images/home/artist-09-aw.jpg" alt="Amy Winehouse">
           </figure>
@@ -339,9 +183,9 @@
           </div>
         </article>
 
-        <article class="spotlight-card">
+        <article class="card spotlight-card">
           <figure class="spotlight-photo">
-            <img src="images/home/artist-10-bs.jpg" alt="The Black Skirt">
+            <img src="images/home/artist-10-bs.jpg" alt="The Black Skirts">
           </figure>
           <div class="vinyl">
             <div class="vinyl-record">
@@ -350,12 +194,12 @@
           </div>
           <div class="spotlight-text">
             <h2>THIRSTY</h2>
-            <h3>The Black Skirt</h3>
+            <h3>The Black Skirts</h3>
             <p>2019 &middot; Indie Rock (Korea)</p>
           </div>
         </article>
 
-        <article class="spotlight-card">
+        <article class="card spotlight-card">
           <figure class="spotlight-photo">
             <img src="images/home/artist-11-fo.jpg" alt="Frank Ocean">
           </figure>
@@ -371,7 +215,7 @@
           </div>
         </article>
 
-        <article class="spotlight-card">
+        <article class="card spotlight-card">
           <figure class="spotlight-photo">
             <img src="images/home/artist-12-ss.jpg" alt="SYSTEM SEOUL">
           </figure>

@@ -1,11 +1,4 @@
-/* =========================================================
-   IMS222 Team Project - Shared Stylesheet
-   MJ manages this file. Team members: do not edit.
-
-   Only the shared frame (top menu bar + footer) is styled
-   here so every page matches. Page content inside <main> we
-   style ourselves as we go.
-   ========================================================= */
+/* Shared styles for every page. MJ manages this file. Page-specific styles go in <page>.css. */
 
 *,
 *::before,
@@ -14,9 +7,13 @@
 }
 
 :root {
-  --color-accent: #b5502e;
   --color-text: #1a1a1a;
-  --color-muted: #666666;
+  --color-body: #3a3a3a;
+  --color-muted: #555555;
+  --color-label: #8a7d6f;
+  --color-accent: #8a5a3a;
+  --color-border: #e2ddd5;
+  --color-surface: #fdfcfa;
 
   --space-sm: 0.5rem;
   --space-md: 1rem;
@@ -26,6 +23,7 @@
 
 body {
   margin: 0;
+  font-family: Georgia, 'Times New Roman', serif;
   color: var(--color-text);
 }
 
@@ -34,41 +32,36 @@ img {
   height: auto;
 }
 
-/* --- Heading defaults (applies everywhere, incl. each page's <main>) --- */
 h1,
 h2,
 h3 {
-  margin: 0 0 0.5em;
+  margin: 0 0 0.5rem;
   font-weight: 700;
   line-height: 1.15;
 }
 
 h1 {
-  font-size: 2.25rem;
+  font-size: 2.6rem;
+  margin-bottom: 0.75rem;
 }
 
 h2 {
   font-size: 1.5rem;
+  margin-bottom: 1.25rem;
 }
 
 h3 {
-  font-size: 1.125rem;
+  font-size: 1.15rem;
 }
 
-/* --- Body link color (nav links keep their own style below) --- */
-main a {
-  color: var(--color-accent);
-}
-
-/* --- Top menu bar (shared header) --- */
 header {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
   padding: var(--space-md) var(--space-lg);
-  background: #fafafa;
-  border-bottom: 1px solid #e5e5e5;
+  background: var(--color-surface);
+  border-bottom: 1px solid var(--color-border);
 }
 
 header .logo a {
@@ -97,16 +90,68 @@ nav a:hover {
   text-decoration: underline;
 }
 
-/* Current page, marked with aria-current="page" on the matching link */
 nav a[aria-current="page"] {
   color: var(--color-accent);
   font-weight: 700;
 }
 
 main {
-  padding: var(--space-lg);
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 3rem 2rem 5rem;
 }
-/* --- Footer (shared) --- */
+
+main > section {
+  margin-bottom: 3rem;
+}
+
+main a {
+  color: var(--color-accent);
+}
+
+main hr {
+  border: none;
+  border-top: 1px solid var(--color-border);
+  margin: 0 0 2.5rem;
+}
+
+.eyebrow {
+  margin: 0 0 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.8rem;
+  color: var(--color-label);
+}
+
+.subtitle {
+  margin: 0 0 1.5rem;
+  font-size: 1.05rem;
+  color: var(--color-muted);
+}
+
+.card {
+  padding: 1.5rem 1.75rem;
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  background: var(--color-surface);
+}
+
+ul.plain {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+ul.plain li {
+  padding: 0.85rem 0;
+  border-bottom: 1px solid var(--color-border);
+  line-height: 1.6;
+}
+
+ul.plain li:last-child {
+  border-bottom: none;
+}
+
 footer {
   color: var(--color-muted);
 }
@@ -117,5 +162,5 @@ footer p {
 
 footer hr {
   border: none;
-  border-top: 1px solid #e5e5e5;
+  border-top: 1px solid var(--color-border);
 }
