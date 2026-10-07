@@ -10,6 +10,11 @@
   }
 }
 
+.team-member {
+  display: flex;
+  flex-direction: column;
+}
+
 .team-member h2 {
   margin-bottom: var(--space-sm);
 }
@@ -22,13 +27,24 @@
 }
 
 .bio {
-  margin-bottom: var(--space-md);
+  margin: 0 0 var(--space-md);
   line-height: 1.5;
 }
 
 .team-member ul {
   padding-left: var(--space-md);
   margin: var(--space-sm) 0;
+}
+
+.team-member > ul {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  margin-top: 0;
+}
+
+.team-member > ul > li:last-child {
+  margin-top: auto;
 }
 
 .team-member ul ul {
