@@ -4,6 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>The Daily Aux | About Us</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="about.css">
 </head>
@@ -27,110 +29,131 @@
   <!-- ======================================================== -->
   <!-- [YOUR WORKSPACE] Edit only inside this <main> tag.        -->
 
-  <main>
+  <main class="container section">
+
+<!-- Title Section with Materialize helper classes -->
+    <div class="center-align">
+      <p class="teal-text text-accent-4><strong>The Daily Aux &bull; ABOUT US</strong></p>
     <p class="eyebrow">The Daily Aux &bull; About Us</p>
-    <h1>Four music lovers. One aux cord.</h1>
-    <p class="subtitle">Meet the Team behind The Daily Aux! We are four music lovers dedicated to bringing you the best tunes, reviews, and music news.</p>
-    <hr>
+    <h2>Four music lovers. One aux cord.</h2>
+    <p class="flow-text">Meet the Team behind The Daily Aux! We are four music lovers dedicated to bringing you the best tunes, reviews, and music news.</p>
 
-    <!-- Wrapper for 2x2 grid styling -->
-    <div class="team-grid">
+<!-- Materialize Divider line -->
+    <div class="divider></div>
+      </div>
 
+<!-- Materialize Cards & Responsive Grid -->
+<div class="row section">
+      
       <!-- MEMBER 1: Carson -->
-      <section class="card team-member">
-        <h2>Carson</h2>
-        <p class="role"><strong>Role:</strong> Information Page</p>
+      <div class="col s12 m6">
+        <div class="card z-depth-2">
+          <div class="card-content">
+            <span class="card-title bold">Carson</span>
+            <p class="teal-text text-accent-4"><strong>Role: Information Page</strong></p>
+            <p>Carson is an avid music fan with a passion for high-energy beats and timeless pop classics.</p>
 
-        <p class="bio">
-          Carson is an avid music fan with a passion for high-energy beats and timeless pop classics.
-        </p>
+            <div class="divider section-margin"></div>
 
-        <ul>
-          <li><strong>Favorite Genres:</strong> Pop, Synth-Pop, EDM</li>
-          <li><strong>Favorite Artists & Albums:</strong>
-            <ul>
-              <li><a href="https://en.wikipedia.org/wiki/Michael_Jackson" target="_blank" rel="noopener">Michael Jackson</a> - <em>Thriller</em></li>
-              <li><a href="https://en.wikipedia.org/wiki/Coldplay" target="_blank" rel="noopener">Coldplay</a> - <em>A Rush of Blood to the Head</em></li>
-              <li><a href="https://en.wikipedia.org/wiki/Calvin_Harris" target="_blank" rel="noopener">Calvin Harris</a> - <em>Motion</em></li>
-            </ul>
-          </li>
-          <li><strong>Favorite Video:</strong>
-            <div class="video"><iframe src="https://www.youtube.com/embed/nMmWtKvCimo?si=jHH1h14ZmbjH7cOT" title="Carson's Favorite Video" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
-          </li>
-        </ul>
-      </section>
+            <h6><strong>Favorite Genres:</strong> Pop, Synth-Pop, EDM</h6>
+            <h6><strong>Favorite Artists &amp; Albums:</strong></h6>
+
+            <!--Collection List -->
+            <div class="collection">
+              <a href="https://en.wikipedia.org/wiki/Michael_Jackson" target="_blank" rel="noopener" class="collection-item">Michael Jackson - <em>Thriller</em></a>
+              <a href="https://en.wikipedia.org/wiki/Coldplay" target="_blank" rel="noopener" class="collection-item">Coldplay - <em>A Rush of Blood to the Head</em></a>
+              <a href="https://en.wikipedia.org/wiki/Calvin_Harris" target="_blank" rel="noopener" class="collection-item">Calvin Harris - <em>Motion</em></a>
+            </div>
+
+            <h6><strong>Favorite Video:</strong></h6>
+          <!-- Responsive Video Container -->
+            <div class="video-container">
+              <iframe src="https://www.youtube.com/embed/nMmWtKvCimo?si=jHH1h14ZmbjH7cOT" title="Carson's Favorite Video" allowfullscreen></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
 
       <!-- MEMBER 2: Owen -->
-      <section class="card team-member">
-        <h2>Owen</h2>
-        <p class="role"><strong>Role:</strong> Contact and FAQ Page</p>
-        
-        <p class="bio">
-          Owen's music taste bridges classic storytelling and immersive modern soundscapes. His rotation consists of timeless classic rock, introspective hip-hop, and psychedelic grooves.
-        </p>
-        
-        <ul>
-          <li><strong>Favorite Genres:</strong> Classic Rock, Hip-Hop, Indie Psychedelic</li>
-          <li><strong>Favorite Artists & Albums:</strong>
-            <ul>
-              <li><a href="https://en.wikipedia.org/wiki/Billy_Joel" target="_blank" rel="noopener">Billy Joel</a> - <em>Glass Houses</em></li>
-              <li><a href="https://en.wikipedia.org/wiki/J._Cole" target="_blank" rel="noopener">J. Cole</a> - <em>Friday Night Lights</em></li>
-              <li><a href="https://en.wikipedia.org/wiki/Tame_Impala" target="_blank" rel="noopener">Tame Impala</a> - <em>Currents</em></li>
-            </ul>
-          </li>
-          <li><strong>Favorite Video:</strong>
-            <div class="video"><iframe src="https://www.youtube.com/embed/sOnqjkJTMaA?si=5IWIoNJU8QA9LFnl" title="Owen's Favorite Video" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
-          </li>
-        </ul>
-      </section>
+      <div class="col s12 m6">
+        <div class="card z-depth-2">
+          <div class="card-content">
+            <span class="card-title bold">Owen</span>
+            <p class="teal-text text-accent-4"><strong>Role: Contact and FAQ Page</strong></p>
+            <p>Owen's music taste bridges classic storytelling and immersive modern soundscapes. His rotation consists of timeless classic rock, introspective hip-hop, and psychedelic grooves.</p>
+            
+            <div class="divider section-margin"></div>
+            
+            <h6><strong>Favorite Genres:</strong> Classic Rock, Hip-Hop, Indie Psychedelic</h6>
+            <h6><strong>Favorite Artists &amp; Albums:</strong></h6>
+            
+            <div class="collection">
+              <a href="https://en.wikipedia.org/wiki/Billy_Joel" target="_blank" rel="noopener" class="collection-item">Billy Joel - <em>Glass Houses</em></a>
+              <a href="https://en.wikipedia.org/wiki/J._Cole" target="_blank" rel="noopener" class="collection-item">J. Cole - <em>Friday Night Lights</em></a>
+              <a href="https://en.wikipedia.org/wiki/Tame_Impala" target="_blank" rel="noopener" class="collection-item">Tame Impala - <em>Currents</em></a>
+            </div>
 
+            <h6><strong>Favorite Video:</strong></h6>
+            <div class="video-container">
+              <iframe src="https://www.youtube.com/embed/sOnqjkJTMaA?si=5IWIoNJU8QA9LFnl" title="Owen's Favorite Video" allowfullscreen></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+      
       <!-- MEMBER 3: Morgan -->
-      <section class="card team-member">
-        <h2>Morgan</h2>
-        <p class="role"><strong>Role:</strong> About Us Page</p>
+      <div class="col s12 m6">
+        <div class="card z-depth-2">
+          <div class="card-content">
+            <span class="card-title bold">Morgan</span>
+            <p class="teal-text text-accent-4"><strong>Role: About Us Page</strong></p>
+            <p>Morgan brings a love for soulful vocals and timeless studio albums to the team. She spends her weekends hunting through vinyl shops for classic records.</p>
+            
+            <div class="divider section-margin"></div>
+            
+            <h6><strong>Favorite Genres:</strong> Neo-Soul, R&amp;B, Progressive Rock</h6>
+            <h6><strong>Favorite Artists &amp; Albums:</strong></h6>
+            
+            <div class="collection">
+              <a href="https://en.wikipedia.org/wiki/Lauryn_Hill" target="_blank" rel="noopener" class="collection-item">Lauryn Hill - <em>The Miseducation of Lauryn Hill</em></a>
+              <a href="https://en.wikipedia.org/wiki/Pink_Floyd" target="_blank" rel="noopener" class="collection-item">Pink Floyd - <em>The Dark Side of the Moon</em></a>
+              <a href="https://en.wikipedia.org/wiki/Amy_Winehouse" target="_blank" rel="noopener" class="collection-item">Amy Winehouse - <em>Back to Black</em></a>
+            </div>
 
-        <p class="bio">
-          Morgan brings a love for soulful vocals and timeless studio albums to the team. She spends her weekends hunting through vinyl shops for classic records.
-        </p>
-
-        <ul>
-          <li><strong>Favorite Genres:</strong> Neo-Soul, R&B, Progressive Rock</li>
-          <li><strong>Favorite Artists & Albums:</strong>
-            <ul>
-              <li><a href="https://en.wikipedia.org/wiki/Lauryn_Hill" target="_blank" rel="noopener">Lauryn Hill</a> - <em>The Miseducation of Lauryn Hill</em></li>
-              <li><a href="https://en.wikipedia.org/wiki/Pink_Floyd" target="_blank" rel="noopener">Pink Floyd</a> - <em>The Dark Side of the Moon</em></li>
-              <li><a href="https://en.wikipedia.org/wiki/Amy_Winehouse" target="_blank" rel="noopener">Amy Winehouse</a> - <em>Back to Black</em></li>
-            </ul>
-          </li>
-          <li><strong>Favorite Video:</strong>
-            <div class="video"><iframe src="https://www.youtube.com/embed/U4UFAejSQFA?si=YoCZ7u2-uPAVORUV" title="Morgan's Favorite Video" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
-          </li>
-        </ul>
-      </section>
-
+            <h6><strong>Favorite Video:</strong></h6>
+            <div class="video-container">
+              <iframe src="https://www.youtube.com/embed/U4UFAejSQFA?si=YoCZ7u2-uPAVORUV" title="Morgan's Favorite Video" allowfullscreen></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+     
       <!-- MEMBER 4: MJ -->
-      <section class="card team-member">
-        <h2>MJ</h2>
-        <p class="role"><strong>Role:</strong> Home Page</p>
+      <div class="col s12 m6">
+        <div class="card z-depth-2">
+          <div class="card-content">
+            <span class="card-title bold">MJ</span>
+            <p class="teal-text text-accent-4"><strong>Role: Home Page</strong></p>
+            <p>MJ is always searching for fresh international sounds and ambient vibes, while sharing unique indie picks.</p>
+            
+            <div class="divider section-margin"></div>
+            
+            <h6><strong>Favorite Genres:</strong> Korean Indie, Alternative R&amp;B, Indie Pop</h6>
+            <h6><strong>Favorite Artists &amp; Albums:</strong></h6>
+            
+            <div class="collection">
+              <a href="https://en.wikipedia.org/wiki/The_Black_Skirts" target="_blank" rel="noopener" class="collection-item">The Black Skirts - <em>THIRSTY</em></a>
+              <a href="https://en.wikipedia.org/wiki/Frank_Ocean" target="_blank" rel="noopener" class="collection-item">Frank Ocean - <em>channel ORANGE</em></a>
+              <a href="#" class="collection-item">SYSTEM SEOUL - <em>SS-POP 3</em></a>
+            </div>
 
-        <p class="bio">
-          MJ is always searching for fresh international sounds and ambient vibes, while sharing unique indie picks.
-        </p>
-
-        <ul>
-          <li><strong>Favorite Genres:</strong> Korean Indie, Alternative R&B, Indie Pop</li>
-          <li><strong>Favorite Artists & Albums:</strong>
-            <ul>
-              <li><a href="https://en.wikipedia.org/wiki/The_Black_Skirts" target="_blank" rel="noopener">The Black Skirts</a> - <em>THIRSTY</em></li>
-              <li><a href="https://en.wikipedia.org/wiki/Frank_Ocean" target="_blank" rel="noopener">Frank Ocean</a> - <em>channel ORANGE</em></li>
-              <li>SYSTEM SEOUL - <em>SS-POP 3</em></li>
-            </ul>
-          </li>
-          <li><strong>Favorite Video:</strong>
-            <div class="video"><iframe src="https://www.youtube.com/embed/e6y5JpPG0Ug?si=Xy5U74k2PF5417Qj" title="MJ's Favorite Video" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
-          </li>
-        </ul>
-      </section>
+            <h6><strong>Favorite Video:</strong></h6>
+            <div class="video-container">
+              <iframe src="https://www.youtube.com/embed/e6y5JpPG0Ug?si=Xy5U74k2PF5417Qj" title="MJ's Favorite Video" allowfullscreen></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
 
     </div>
   </main>
@@ -142,5 +165,14 @@
     <p>&copy; 2026 Team Kode Kidz. All rights reserved.</p>
   </footer>
 
+  <!-- MATERIALIZE JAVASCRIPT & INITIALIZATION-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Initializes mobile navigation trigger menu
+      var elemsSidenav = document.querySelectorAll('.sidenav');
+      M.Sidenav.init(elemsSidenav);
+    });
+  </script>
 </body>
 </html>
