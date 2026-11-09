@@ -68,3 +68,15 @@
   border: 0;
   border-radius: 4px;
 }
+
+/* Fix Materialize default pink navbar override */
+header nav {
+  background-color: transparent !important;
+  box-shadow: none !important;
+  height: auto !important;
+  line-height: normal !important;
+}
+
+header nav ul a {
+  color: #333333 !important; /* Restores your original Sprint #1 dark text color */
+}
