@@ -31,26 +31,26 @@
 
   <main class="container section">
 
-<!-- Title Section with Materialize helper classes -->
+    <!-- Title Section with Materialize helper classes -->
     <div class="center-align">
-      <p class="teal-text text-accent-4><strong>The Daily Aux &bull; ABOUT US</strong></p>
-    <p class="eyebrow">The Daily Aux &bull; About Us</p>
-    <h2>Four music lovers. One aux cord.</h2>
-    <p class="flow-text">Meet the Team behind The Daily Aux! We are four music lovers dedicated to bringing you the best tunes, reviews, and music news.</p>
+      <p class="eyebrow">The Daily Aux &bull; About Us</p>
+      <h2>Four music lovers. One aux cord.</h2>
+      <p class="flow-text">Meet the Team behind The Daily Aux! We are four music lovers dedicated to bringing you the best tunes, reviews, and music news.</p>
 
-<!-- Materialize Divider line -->
-    <div class="divider></div>
-      </div>
+      <!-- MATERIALIZE FEATURE: Section Divider -->
+      <div class="divider"></div>
+    </div>
 
-<!-- Materialize Cards & Responsive Grid -->
-<div class="row section">
+    <!-- MATERIALIZE COMPONENT & CSS FEATURE: Responsive Grid (.row / .col) & Cards (.card) -->
+    <!-- What it does: Replaces custom CSS grid with Materialize 2-column card layout -->
+    <div class="row section">
       
       <!-- MEMBER 1: Carson -->
       <div class="col s12 m6">
         <div class="card z-depth-2">
           <div class="card-content">
             <span class="card-title bold">Carson</span>
-            <p class="teal-text text-accent-4"><strong>Role: Information Page</strong></p>
+            <p class="role"><strong>Role:</strong> Information Page</p>
             <p>Carson is an avid music fan with a passion for high-energy beats and timeless pop classics.</p>
 
             <div class="divider section-margin"></div>
@@ -58,7 +58,8 @@
             <h6><strong>Favorite Genres:</strong> Pop, Synth-Pop, EDM</h6>
             <h6><strong>Favorite Artists &amp; Albums:</strong></h6>
 
-            <!--Collection List -->
+            <!-- MATERIALIZE COMPONENT: Collection List -->
+            <!-- What it does: Groups favorite items into a clean Materialize collection block -->
             <div class="collection">
               <a href="https://en.wikipedia.org/wiki/Michael_Jackson" target="_blank" rel="noopener" class="collection-item">Michael Jackson - <em>Thriller</em></a>
               <a href="https://en.wikipedia.org/wiki/Coldplay" target="_blank" rel="noopener" class="collection-item">Coldplay - <em>A Rush of Blood to the Head</em></a>
@@ -66,7 +67,8 @@
             </div>
 
             <h6><strong>Favorite Video:</strong></h6>
-          <!-- Responsive Video Container -->
+            <!-- MATERIALIZE CSS FEATURE: Responsive Video Container -->
+            <!-- What it does: Wraps embedded YouTube iframe to auto-scale dynamically -->
             <div class="video-container">
               <iframe src="https://www.youtube.com/embed/nMmWtKvCimo?si=jHH1h14ZmbjH7cOT" title="Carson's Favorite Video" allowfullscreen></iframe>
             </div>
@@ -79,7 +81,7 @@
         <div class="card z-depth-2">
           <div class="card-content">
             <span class="card-title bold">Owen</span>
-            <p class="teal-text text-accent-4"><strong>Role: Contact and FAQ Page</strong></p>
+            <p class="role"><strong>Role:</strong> Contact and FAQ Page</p>
             <p>Owen's music taste bridges classic storytelling and immersive modern soundscapes. His rotation consists of timeless classic rock, introspective hip-hop, and psychedelic grooves.</p>
             
             <div class="divider section-margin"></div>
@@ -106,7 +108,7 @@
         <div class="card z-depth-2">
           <div class="card-content">
             <span class="card-title bold">Morgan</span>
-            <p class="teal-text text-accent-4"><strong>Role: About Us Page</strong></p>
+            <p class="role"><strong>Role:</strong> About Us Page</p>
             <p>Morgan brings a love for soulful vocals and timeless studio albums to the team. She spends her weekends hunting through vinyl shops for classic records.</p>
             
             <div class="divider section-margin"></div>
@@ -127,13 +129,13 @@
           </div>
         </div>
       </div>
-     
+      
       <!-- MEMBER 4: MJ -->
       <div class="col s12 m6">
         <div class="card z-depth-2">
           <div class="card-content">
             <span class="card-title bold">MJ</span>
-            <p class="teal-text text-accent-4"><strong>Role: Home Page</strong></p>
+            <p class="role"><strong>Role:</strong> Home Page</p>
             <p>MJ is always searching for fresh international sounds and ambient vibes, while sharing unique indie picks.</p>
             
             <div class="divider section-margin"></div>
@@ -165,14 +167,7 @@
     <p>&copy; 2026 Team Kode Kidz. All rights reserved.</p>
   </footer>
 
-  <!-- MATERIALIZE JAVASCRIPT & INITIALIZATION-->
+  <!-- MATERIALIZE JAVASCRIPT -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      // Initializes mobile navigation trigger menu
-      var elemsSidenav = document.querySelectorAll('.sidenav');
-      M.Sidenav.init(elemsSidenav);
-    });
-  </script>
 </body>
 </html>
