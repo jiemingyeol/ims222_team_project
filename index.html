@@ -9,10 +9,10 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="index.css">
-  <script src="home.js" defer></script>
   <!-- Materialize JS (CDN) and site.js, which starts the navbar's mobile Sidenav -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js" defer></script>
   <script src="site.js" defer></script>
+  <script src="home.js" defer></script>
 </head>
 <body>
 
@@ -44,15 +44,53 @@
 
   <main>
 
-    <!-- Artist carousel: home.js swaps the photo, vinyl label and text. Image naming: images/home/README.md -->
     <section class="spotlight" aria-roledescription="carousel" aria-label="Featured artists">
 
       <div class="spotlight-stage">
-        <figure class="spotlight-photo">
-          <img id="spotlight-photo" src="images/home/artist-01-mj.jpg" alt="Michael Jackson">
-        </figure>
-        <button type="button" class="spotlight-arrow spotlight-prev" aria-label="Previous artist">&#8249;</button>
-        <button type="button" class="spotlight-arrow spotlight-next" aria-label="Next artist">&#8250;</button>
+        <!-- MATERIALIZE JAVASCRIPT: Carousel (fullWidth slideshow of 12 artist photos; not covered in class).
+             home.js starts it and uses its onCycleTo callback to update the vinyl and text below. -->
+        <div class="carousel carousel-slider">
+        <div class="carousel-item" data-artist="Michael Jackson" data-album="Thriller" data-year="1982" data-genre="Pop / R&amp;B" data-cover="images/home/album-01-mj.jpg">
+          <img src="images/home/artist-01-mj.jpg" alt="Michael Jackson">
+        </div>
+        <div class="carousel-item" data-artist="Coldplay" data-album="A Rush of Blood to the Head" data-year="2002" data-genre="Alternative Rock" data-cover="images/home/album-02-cp.jpg">
+          <img src="images/home/artist-02-cp.jpg" alt="Coldplay">
+        </div>
+        <div class="carousel-item" data-artist="Calvin Harris" data-album="Motion" data-year="2014" data-genre="Dance / EDM" data-cover="images/home/album-03-ch.jpg">
+          <img src="images/home/artist-03-ch.jpg" alt="Calvin Harris">
+        </div>
+        <div class="carousel-item" data-artist="Billy Joel" data-album="Glass Houses" data-year="1980" data-genre="Rock" data-cover="images/home/album-04-bj.jpg">
+          <img src="images/home/artist-04-bj.jpg" alt="Billy Joel">
+        </div>
+        <div class="carousel-item" data-artist="J. Cole" data-album="Friday Night Lights" data-year="2010" data-genre="Hip-Hop (Mixtape)" data-cover="images/home/album-05-jc.jpg">
+          <img src="images/home/artist-05-jc.jpg" alt="J. Cole">
+        </div>
+        <div class="carousel-item" data-artist="Tame Impala" data-album="Currents" data-year="2015" data-genre="Psychedelic Pop" data-cover="images/home/album-06-ti.jpg">
+          <img src="images/home/artist-06-ti.jpg" alt="Tame Impala">
+        </div>
+        <div class="carousel-item" data-artist="Lauryn Hill" data-album="The Miseducation of Lauryn Hill" data-year="1998" data-genre="Neo-Soul / Hip-Hop" data-cover="images/home/album-07-lh.jpg">
+          <img src="images/home/artist-07-lh.jpg" alt="Lauryn Hill">
+        </div>
+        <div class="carousel-item" data-artist="Pink Floyd" data-album="The Dark Side of the Moon" data-year="1973" data-genre="Progressive Rock" data-cover="images/home/album-08-pf.jpg">
+          <img src="images/home/artist-08-pf.jpg" alt="Pink Floyd">
+        </div>
+        <div class="carousel-item" data-artist="Amy Winehouse" data-album="Back to Black" data-year="2006" data-genre="Soul / R&amp;B" data-cover="images/home/album-09-aw.jpg">
+          <img src="images/home/artist-09-aw.jpg" alt="Amy Winehouse">
+        </div>
+        <div class="carousel-item" data-artist="The Black Skirts" data-album="THIRSTY" data-year="2019" data-genre="Indie Rock (Korea)" data-cover="images/home/album-10-bs.jpg">
+          <img src="images/home/artist-10-bs.jpg" alt="The Black Skirts">
+        </div>
+        <div class="carousel-item" data-artist="Frank Ocean" data-album="channel ORANGE" data-year="2012" data-genre="R&amp;B / Psychedelic Soul" data-cover="images/home/album-11-fo.jpg">
+          <img src="images/home/artist-11-fo.jpg" alt="Frank Ocean">
+        </div>
+        <div class="carousel-item" data-artist="SYSTEM SEOUL" data-album="SS-POP 3" data-year="2026" data-genre="Hyperpop / Digicore" data-cover="images/home/album-12-ss.jpg">
+          <img src="images/home/artist-12-ss.jpg" alt="SYSTEM SEOUL">
+        </div>
+        </div>
+
+        <!-- MATERIALIZE COMPONENT: Floating Buttons with Icons and the Waves effect (previous / next arrows) -->
+        <button type="button" class="btn-floating btn-large waves-effect waves-light spotlight-arrow spotlight-prev" aria-label="Previous artist"><i class="material-icons">chevron_left</i></button>
+        <button type="button" class="btn-floating btn-large waves-effect waves-light spotlight-arrow spotlight-next" aria-label="Next artist"><i class="material-icons">chevron_right</i></button>
       </div>
 
       <div class="spotlight-intro">
@@ -63,7 +101,8 @@
       </div>
 
       <div class="spotlight-detail">
-        <div class="vinyl">
+        <!-- MATERIALIZE CSS: Shadow (z-depth-3) lifts the vinyl off the page (not covered in class) -->
+        <div class="vinyl z-depth-3">
           <div class="vinyl-record">
             <img id="vinyl-label" class="vinyl-label" src="images/home/album-01-mj.jpg" alt="Thriller cover">
           </div>
@@ -73,7 +112,11 @@
           <p class="eyebrow"><span id="spotlight-current">1</span> / <span id="spotlight-total">12</span></p>
           <h2 id="spotlight-album">Thriller</h2>
           <h3 id="spotlight-artist">Michael Jackson</h3>
-          <p id="spotlight-meta">1982 &middot; Pop / R&amp;B</p>
+          <!-- MATERIALIZE COMPONENT: Badges for the year and genre (not covered in class) -->
+          <p class="spotlight-meta">
+            <span class="new badge" data-badge-caption="" id="spotlight-year">1982</span>
+            <span class="new badge" data-badge-caption="" id="spotlight-genre">Pop / R&amp;B</span>
+          </p>
         </div>
       </div>
 

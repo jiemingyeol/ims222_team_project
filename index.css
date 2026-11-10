@@ -9,18 +9,19 @@ main {
 .spotlight-stage {
   position: relative;
   width: 100vw;
-  height: clamp(280px, 55vh, 560px);
   margin-left: calc(50% - 50vw);
-  overflow: hidden;
+}
+
+.spotlight-stage .carousel.carousel-slider {
+  height: clamp(280px, 55vh, 560px) !important;
   background: var(--color-border);
 }
 
-.spotlight-photo {
-  height: 100%;
-  margin: 0;
+.spotlight-stage .carousel.carousel-slider .carousel-item {
+  min-height: 0;
 }
 
-.spotlight-photo img {
+.spotlight-stage .carousel-item img {
   display: block;
   width: 100%;
   height: 100%;
@@ -31,20 +32,13 @@ main {
 .spotlight-arrow {
   position: absolute;
   top: 50%;
-  width: 48px;
-  height: 48px;
-  padding: 0 0 4px;
-  border: 0;
-  border-radius: 50%;
+  z-index: 3;
   background: rgba(0, 0, 0, 0.45);
-  color: #ffffff;
-  font-size: 2rem;
-  line-height: 1;
-  cursor: pointer;
   transform: translateY(-50%);
 }
 
-.spotlight-arrow:hover {
+.spotlight-arrow:hover,
+.spotlight-arrow:focus {
   background: rgba(0, 0, 0, 0.7);
 }
 
@@ -76,6 +70,7 @@ main {
 .vinyl {
   width: 180px;
   height: 180px;
+  border-radius: 50%;
 }
 
 .vinyl-record {
@@ -87,7 +82,6 @@ main {
   height: 100%;
   border-radius: 50%;
   background: repeating-radial-gradient(circle, #222222 0, #222222 2px, #000000 3px, #000000 5px);
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
   animation: vinyl-spin 6s linear infinite;
 }
 
@@ -131,7 +125,13 @@ main {
   color: var(--color-muted);
 }
 
-.spotlight-text p {
+.spotlight-meta {
   margin: 0;
-  color: var(--color-muted);
+}
+
+.spotlight-text span.badge.new {
+  float: none;
+  display: inline-block;
+  margin: 0 0.5rem 0 0;
+  background-color: var(--color-accent);
 }

@@ -32,7 +32,7 @@ Every page loads [Materialize CSS](https://materializecss.com/) 1.0.0 from a CDN
 
 If you use Materialize in your own page, put a comment above it that names the CSS, component, or JavaScript feature. The instructor looks for these comments.
 
-Home also uses `home.js`, which powers the artist carousel.
+Home also uses `home.js`, which starts the Materialize Carousel (JavaScript), keeps the vinyl and the artist info in sync with the photo, and drives the arrow buttons. Home's other Materialize pieces are marked with comments in `index.html`: floating Buttons and Icons, Shadow (`z-depth-3`) and Badges.
 
 **MJ only** (nobody else edits these):
 `style.css`, `site.js`, plus the `[SHARED HEADER]` and `[SHARED FOOTER]` blocks inside every HTML file.
