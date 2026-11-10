@@ -4,25 +4,39 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>The Daily Aux | Home</title>
+  <!-- Materialize CSS and icon font (CDN). Must load before style.css -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="index.css">
-
+  <script src="home.js" defer></script>
+  <!-- Materialize JS (CDN) and site.js, which starts the navbar's mobile Sidenav -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js" defer></script>
+  <script src="site.js" defer></script>
 </head>
 <body>
 
   <!-- [SHARED HEADER] MJ only - do not edit this block -->
   <header>
-    <div class="logo">
-      <a href="index.html">The Daily Aux</a>
-    </div>
+    <!-- MATERIALIZE COMPONENT: Navbar. On small screens the links move into the Sidenav (JavaScript: Sidenav) -->
     <nav>
-      <ul>
-        <li><a href="info.html">Info</a></li>
-        <li><a href="faq.html">FAQ</a></li>
-        <li><a href="about.html">About Us</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
+      <div class="nav-wrapper">
+        <a href="index.html" class="brand-logo"><img src="images/shared/logo.png" alt="" width="40" height="40">The Daily Aux</a>
+        <a href="#" data-target="mobile-nav" class="sidenav-trigger" aria-label="Open menu"><i class="material-icons">menu</i></a>
+        <ul class="right hide-on-med-and-down">
+          <li><a href="info.html">Info</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
     </nav>
+    <ul class="sidenav" id="mobile-nav">
+      <li><a href="info.html">Info</a></li>
+      <li><a href="faq.html">FAQ</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
   </header>
 
   <!-- ======================================================== -->
@@ -30,217 +44,68 @@
 
   <main>
 
-    <p class="eyebrow">The Daily Aux &bull; Favorite Albums</p>
-    <h1>Twelve artists. Twelve albums.</h1>
-    <p class="subtitle">Shared albums picked by the four of us.</p>
-    <hr>
+    <!-- Artist carousel: home.js swaps the photo, vinyl label and text. Image naming: images/home/README.md -->
+    <section class="spotlight" aria-roledescription="carousel" aria-label="Featured artists">
 
-    <!-- Artist spotlight: image naming is explained in images/home/README.md -->
-    <section aria-label="Featured artists">
-      <div class="spotlight-grid">
-
-        <article class="card spotlight-card">
-          <figure class="spotlight-photo">
-            <img src="images/home/artist-01-mj.jpg" alt="Michael Jackson">
-          </figure>
-          <div class="vinyl">
-            <div class="vinyl-record">
-              <img class="vinyl-label" src="images/home/album-01-mj.jpg" alt="Thriller cover">
-            </div>
-          </div>
-          <div class="spotlight-text">
-            <h2>Thriller</h2>
-            <h3>Michael Jackson</h3>
-            <p>1982 &middot; Pop / R&amp;B</p>
-          </div>
-        </article>
-
-        <article class="card spotlight-card">
-          <figure class="spotlight-photo">
-            <img src="images/home/artist-02-cp.jpg" alt="Coldplay">
-          </figure>
-          <div class="vinyl">
-            <div class="vinyl-record">
-              <img class="vinyl-label" src="images/home/album-02-cp.jpg" alt="A Rush of Blood to the Head cover">
-            </div>
-          </div>
-          <div class="spotlight-text">
-            <h2>A Rush of Blood to the Head</h2>
-            <h3>Coldplay</h3>
-            <p>2002 &middot; Alternative Rock</p>
-          </div>
-        </article>
-
-        <article class="card spotlight-card">
-          <figure class="spotlight-photo">
-            <img src="images/home/artist-03-ch.jpg" alt="Calvin Harris">
-          </figure>
-          <div class="vinyl">
-            <div class="vinyl-record">
-              <img class="vinyl-label" src="images/home/album-03-ch.jpg" alt="Motion cover">
-            </div>
-          </div>
-          <div class="spotlight-text">
-            <h2>Motion</h2>
-            <h3>Calvin Harris</h3>
-            <p>2014 &middot; Dance / EDM</p>
-          </div>
-        </article>
-
-        <article class="card spotlight-card">
-          <figure class="spotlight-photo">
-            <img src="images/home/artist-04-bj.jpg" alt="Billy Joel">
-          </figure>
-          <div class="vinyl">
-            <div class="vinyl-record">
-              <img class="vinyl-label" src="images/home/album-04-bj.jpg" alt="Glass Houses cover">
-            </div>
-          </div>
-          <div class="spotlight-text">
-            <h2>Glass Houses</h2>
-            <h3>Billy Joel</h3>
-            <p>1980 &middot; Rock</p>
-          </div>
-        </article>
-
-        <article class="card spotlight-card">
-          <figure class="spotlight-photo">
-            <img src="images/home/artist-05-jc.jpg" alt="J. Cole">
-          </figure>
-          <div class="vinyl">
-            <div class="vinyl-record">
-              <img class="vinyl-label" src="images/home/album-05-jc.jpg" alt="Friday Night Lights cover">
-            </div>
-          </div>
-          <div class="spotlight-text">
-            <h2>Friday Night Lights</h2>
-            <h3>J. Cole</h3>
-            <p>2010 &middot; Hip-Hop (Mixtape)</p>
-          </div>
-        </article>
-
-        <article class="card spotlight-card">
-          <figure class="spotlight-photo">
-            <img src="images/home/artist-06-ti.jpg" alt="Tame Impala">
-          </figure>
-          <div class="vinyl">
-            <div class="vinyl-record">
-              <img class="vinyl-label" src="images/home/album-06-ti.jpg" alt="Currents cover">
-            </div>
-          </div>
-          <div class="spotlight-text">
-            <h2>Currents</h2>
-            <h3>Tame Impala</h3>
-            <p>2015 &middot; Psychedelic Pop</p>
-          </div>
-        </article>
-
-        <article class="card spotlight-card">
-          <figure class="spotlight-photo">
-            <img src="images/home/artist-07-lh.jpg" alt="Lauryn Hill">
-          </figure>
-          <div class="vinyl">
-            <div class="vinyl-record">
-              <img class="vinyl-label" src="images/home/album-07-lh.jpg" alt="The Miseducation of Lauryn Hill cover">
-            </div>
-          </div>
-          <div class="spotlight-text">
-            <h2>The Miseducation of Lauryn Hill</h2>
-            <h3>Lauryn Hill</h3>
-            <p>1998 &middot; Neo-Soul / Hip-Hop</p>
-          </div>
-        </article>
-
-        <article class="card spotlight-card">
-          <figure class="spotlight-photo">
-            <img src="images/home/artist-08-pf.jpg" alt="Pink Floyd">
-          </figure>
-          <div class="vinyl">
-            <div class="vinyl-record">
-              <img class="vinyl-label" src="images/home/album-08-pf.jpg" alt="The Dark Side of the Moon cover">
-            </div>
-          </div>
-          <div class="spotlight-text">
-            <h2>The Dark Side of the Moon</h2>
-            <h3>Pink Floyd</h3>
-            <p>1973 &middot; Progressive Rock</p>
-          </div>
-        </article>
-
-        <article class="card spotlight-card">
-          <figure class="spotlight-photo">
-            <img src="images/home/artist-09-aw.jpg" alt="Amy Winehouse">
-          </figure>
-          <div class="vinyl">
-            <div class="vinyl-record">
-              <img class="vinyl-label" src="images/home/album-09-aw.jpg" alt="Back to Black cover">
-            </div>
-          </div>
-          <div class="spotlight-text">
-            <h2>Back to Black</h2>
-            <h3>Amy Winehouse</h3>
-            <p>2006 &middot; Soul / R&amp;B</p>
-          </div>
-        </article>
-
-        <article class="card spotlight-card">
-          <figure class="spotlight-photo">
-            <img src="images/home/artist-10-bs.jpg" alt="The Black Skirts">
-          </figure>
-          <div class="vinyl">
-            <div class="vinyl-record">
-              <img class="vinyl-label" src="images/home/album-10-bs.jpg" alt="THIRSTY cover">
-            </div>
-          </div>
-          <div class="spotlight-text">
-            <h2>THIRSTY</h2>
-            <h3>The Black Skirts</h3>
-            <p>2019 &middot; Indie Rock (Korea)</p>
-          </div>
-        </article>
-
-        <article class="card spotlight-card">
-          <figure class="spotlight-photo">
-            <img src="images/home/artist-11-fo.jpg" alt="Frank Ocean">
-          </figure>
-          <div class="vinyl">
-            <div class="vinyl-record">
-              <img class="vinyl-label" src="images/home/album-11-fo.jpg" alt="channel ORANGE cover">
-            </div>
-          </div>
-          <div class="spotlight-text">
-            <h2>channel ORANGE</h2>
-            <h3>Frank Ocean</h3>
-            <p>2012 &middot; R&amp;B / Psychedelic Soul</p>
-          </div>
-        </article>
-
-        <article class="card spotlight-card">
-          <figure class="spotlight-photo">
-            <img src="images/home/artist-12-ss.jpg" alt="SYSTEM SEOUL">
-          </figure>
-          <div class="vinyl">
-            <div class="vinyl-record">
-              <img class="vinyl-label" src="images/home/album-12-ss.jpg" alt="SS-POP 3 cover">
-            </div>
-          </div>
-          <div class="spotlight-text">
-            <h2>SS-POP 3</h2>
-            <h3>SYSTEM SEOUL</h3>
-            <p>2026 &middot; Hyperpop / Digicore</p>
-          </div>
-        </article>
-
+      <div class="spotlight-stage">
+        <figure class="spotlight-photo">
+          <img id="spotlight-photo" src="images/home/artist-01-mj.jpg" alt="Michael Jackson">
+        </figure>
+        <button type="button" class="spotlight-arrow spotlight-prev" aria-label="Previous artist">&#8249;</button>
+        <button type="button" class="spotlight-arrow spotlight-next" aria-label="Next artist">&#8250;</button>
       </div>
+
+      <div class="spotlight-intro">
+        <p class="eyebrow">The Daily Aux &bull; Favorite Albums</p>
+        <h1>Twelve artists. Twelve albums.</h1>
+        <p class="subtitle">Shared albums picked by the four of us.</p>
+        <hr>
+      </div>
+
+      <div class="spotlight-detail">
+        <div class="vinyl">
+          <div class="vinyl-record">
+            <img id="vinyl-label" class="vinyl-label" src="images/home/album-01-mj.jpg" alt="Thriller cover">
+          </div>
+        </div>
+
+        <div class="spotlight-text" aria-live="polite">
+          <p class="eyebrow"><span id="spotlight-current">1</span> / <span id="spotlight-total">12</span></p>
+          <h2 id="spotlight-album">Thriller</h2>
+          <h3 id="spotlight-artist">Michael Jackson</h3>
+          <p id="spotlight-meta">1982 &middot; Pop / R&amp;B</p>
+        </div>
+      </div>
+
     </section>
 
   </main>
   <!-- ======================================================== -->
 
   <!-- [SHARED FOOTER] MJ only - do not edit this block -->
-  <footer>
-    <hr>
-    <p>&copy; 2026 Team Kode Kidz. All rights reserved.</p>
+  <footer class="page-footer">
+    <!-- MATERIALIZE COMPONENT: Footer, built with the CSS Grid (row / col) and color helper classes -->
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">The Daily Aux</h5>
+          <p class="grey-text text-lighten-4">Shared albums picked by the four of us.</p>
+        </div>
+        <div class="col l4 offset-l2 s12">
+          <h5 class="white-text">Pages</h5>
+          <ul>
+            <li><a class="grey-text text-lighten-3" href="index.html">Home</a></li>
+            <li><a class="grey-text text-lighten-3" href="info.html">Info</a></li>
+            <li><a class="grey-text text-lighten-3" href="faq.html">FAQ</a></li>
+            <li><a class="grey-text text-lighten-3" href="about.html">About Us</a></li>
+            <li><a class="grey-text text-lighten-3" href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">&copy; 2026 Team Kode Kidz. All rights reserved.</div>
+    </div>
   </footer>
 
 </body>

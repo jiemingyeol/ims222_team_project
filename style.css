@@ -54,43 +54,59 @@ h3 {
   font-size: 1.15rem;
 }
 
-header {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-  padding: var(--space-md) var(--space-lg);
+/* Navbar (Materialize navbar restyled to the site look) */
+header nav {
+  width: auto;
+  height: 64px;
+  line-height: 64px;
   background: var(--color-surface);
+  color: var(--color-text);
   border-bottom: 1px solid var(--color-border);
+  box-shadow: none;
 }
 
-header .logo a {
-  font-weight: 700;
-  font-size: 1.25rem;
-  letter-spacing: 0.02em;
-  text-decoration: none;
-  color: inherit;
+header .nav-wrapper {
+  padding: 0 var(--space-lg);
 }
 
-nav ul {
+header .brand-logo {
   display: flex;
-  flex-wrap: wrap;
-  gap: 1.25rem;
+  align-items: center;
+  gap: 0.6rem;
+  height: 100%;
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: var(--color-text);
+}
+
+header .brand-logo img {
+  display: block;
+  width: 40px;
+  height: 40px;
+}
+
+header .sidenav-trigger {
+  height: 64px;
   margin: 0;
-  padding: 0;
-  list-style: none;
+  color: var(--color-text);
 }
 
-nav a {
-  text-decoration: none;
-  color: inherit;
+header .sidenav-trigger .material-icons {
+  height: 64px;
+  line-height: 64px;
 }
 
-nav a:hover {
-  text-decoration: underline;
+header nav ul a {
+  color: var(--color-text);
 }
 
-nav a[aria-current="page"] {
+header nav ul a:hover {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+nav a[aria-current="page"],
+.sidenav a[aria-current="page"] {
   color: var(--color-accent);
   font-weight: 700;
 }
@@ -152,15 +168,43 @@ ul.plain li:last-child {
   border-bottom: none;
 }
 
-footer {
-  color: var(--color-muted);
+/* Footer (Materialize page-footer restyled to the site look) */
+footer.page-footer {
+  margin-top: 0;
+  background: var(--color-text);
 }
 
-footer p {
-  padding: var(--space-md) var(--space-lg);
+footer.page-footer .footer-copyright {
+  background: rgba(255, 255, 255, 0.06);
 }
 
-footer hr {
-  border: none;
-  border-top: 1px solid var(--color-border);
+/* Materialize compatibility: it hides plain form controls, shrinks labels and textareas,
+   and makes <strong> too light for Georgia. Keep plain HTML (like the Contact form) working. */
+[type="radio"]:not(:checked),
+[type="radio"]:checked,
+[type="checkbox"]:not(:checked),
+[type="checkbox"]:checked {
+  position: static;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+select {
+  display: block;
+  width: auto;
+  height: auto;
+}
+
+textarea {
+  height: auto;
+}
+
+label {
+  font-size: inherit;
+  color: inherit;
+}
+
+b,
+strong {
+  font-weight: 700;
 }

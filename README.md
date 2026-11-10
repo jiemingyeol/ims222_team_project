@@ -18,7 +18,7 @@ A small 5-page music website for IMS222 (Intro to Interaction Design): our twelv
 
 ## Styles
 
-`style.css` holds everything shared: fonts, colors, headings, page width, header, footer, and the card look. Every page loads it first.
+`style.css` holds everything shared: fonts, colors, headings, page width, header, footer, and the card look. Every page loads it right after Materialize.
 
 If a page needs extra styling, give it its own CSS file named after the page (for example `info.css`) and link it in `<head>` right after `style.css`:
 
@@ -26,8 +26,16 @@ If a page needs extra styling, give it its own CSS file named after the page (fo
 
 Use the variables from `style.css` (for example `var(--color-accent)`, `var(--space-md)`) so pages stay consistent.
 
+## Materialize
+
+Every page loads [Materialize CSS](https://materializecss.com/) 1.0.0 from a CDN (a public server, so you need internet) in `<head>`, before `style.css`. The shared header (Navbar, with a mobile Sidenav) and footer (page-footer) are Materialize components. `site.js` starts the Sidenav, and `style.css` restyles Materialize to match our look and keeps plain HTML forms working.
+
+If you use Materialize in your own page, put a comment above it that names the CSS, component, or JavaScript feature. The instructor looks for these comments.
+
+Home also uses `home.js`, which powers the artist carousel.
+
 **MJ only** (nobody else edits these):
-`style.css`, plus the `[SHARED HEADER]` and `[SHARED FOOTER]` blocks inside every HTML file.
+`style.css`, `site.js`, plus the `[SHARED HEADER]` and `[SHARED FOOTER]` blocks inside every HTML file.
 
 ## Images
 
