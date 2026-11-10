@@ -88,9 +88,10 @@
         </div>
         </div>
 
-        <!-- MATERIALIZE COMPONENT: Floating Buttons with Icons and the Waves effect (previous / next arrows) -->
-        <button type="button" class="btn-floating btn-large waves-effect waves-light spotlight-arrow spotlight-prev" aria-label="Previous artist"><i class="material-icons">chevron_left</i></button>
-        <button type="button" class="btn-floating btn-large waves-effect waves-light spotlight-arrow spotlight-next" aria-label="Next artist"><i class="material-icons">chevron_right</i></button>
+        <!-- MATERIALIZE COMPONENT: Floating Buttons with Icons and the Waves effect (previous / next arrows)
+             MATERIALIZE JAVASCRIPT: Tooltips on both arrows (class "tooltipped"; not covered in class). site.js starts them. -->
+        <button type="button" class="btn-floating btn-large waves-effect waves-light tooltipped spotlight-arrow spotlight-prev" data-position="right" data-tooltip="Previous artist" aria-label="Previous artist"><i class="material-icons">chevron_left</i></button>
+        <button type="button" class="btn-floating btn-large waves-effect waves-light tooltipped spotlight-arrow spotlight-next" data-position="left" data-tooltip="Next artist" aria-label="Next artist"><i class="material-icons">chevron_right</i></button>
       </div>
 
       <div class="spotlight-intro">

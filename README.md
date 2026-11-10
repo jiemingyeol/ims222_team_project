@@ -28,7 +28,7 @@ Use the variables from `style.css` (for example `var(--color-accent)`, `var(--sp
 
 ## Materialize
 
-Every page loads [Materialize CSS](https://materializecss.com/) 1.0.0 from a CDN (a public server, so you need internet) in `<head>`, before `style.css`. The shared header (Navbar, with a mobile Sidenav) and footer (page-footer) are Materialize components. `site.js` starts the Sidenav, and `style.css` restyles Materialize to match our look and keeps plain HTML forms working.
+Every page loads [Materialize CSS](https://materializecss.com/) 1.0.0 from a CDN (a public server, so you need internet) in `<head>`, before `style.css`. The shared header (Navbar, with a mobile Sidenav) and footer (page-footer) are Materialize components. `site.js` starts the Sidenav and the Tooltips (any element with class `tooltipped`), and `style.css` restyles Materialize to match our look and keeps plain HTML forms working.
 
 If you use Materialize in your own page, put a comment above it that names the CSS, component, or JavaScript feature. The instructor looks for these comments.
 
