@@ -13,6 +13,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js" defer></script>
   <script src="site.js" defer></script>
   <script src="home.js" defer></script>
+  <script src="recommend.js" defer></script>
 </head>
 <body>
 
@@ -50,40 +51,40 @@
         <!-- MATERIALIZE JAVASCRIPT: Carousel (fullWidth slideshow of 12 artist photos; not covered in class).
              home.js starts it and uses its onCycleTo callback to update the vinyl and text below. -->
         <div class="carousel carousel-slider">
-        <div class="carousel-item" data-artist="Michael Jackson" data-album="Thriller" data-year="1982" data-genre="Pop / R&amp;B" data-cover="images/home/album-01-mj.jpg">
+        <div class="carousel-item" data-artist="Michael Jackson" data-album="Thriller" data-era="classic" data-mood="energy" data-year="1982" data-genre="Pop / R&amp;B" data-cover="images/home/album-01-mj.jpg">
           <img src="images/home/artist-01-mj.jpg" alt="Michael Jackson">
         </div>
-        <div class="carousel-item" data-artist="Coldplay" data-album="A Rush of Blood to the Head" data-year="2002" data-genre="Alternative Rock" data-cover="images/home/album-02-cp.jpg">
+        <div class="carousel-item" data-artist="Coldplay" data-album="A Rush of Blood to the Head" data-era="middle" data-mood="anthem" data-year="2002" data-genre="Alternative Rock" data-cover="images/home/album-02-cp.jpg">
           <img src="images/home/artist-02-cp.jpg" alt="Coldplay">
         </div>
-        <div class="carousel-item" data-artist="Calvin Harris" data-album="Motion" data-year="2014" data-genre="Dance / EDM" data-cover="images/home/album-03-ch.jpg">
+        <div class="carousel-item" data-artist="Calvin Harris" data-album="Motion" data-era="recent" data-mood="anthem" data-year="2014" data-genre="Dance / EDM" data-cover="images/home/album-03-ch.jpg">
           <img src="images/home/artist-03-ch.jpg" alt="Calvin Harris">
         </div>
-        <div class="carousel-item" data-artist="Billy Joel" data-album="Glass Houses" data-year="1980" data-genre="Rock" data-cover="images/home/album-04-bj.jpg">
+        <div class="carousel-item" data-artist="Billy Joel" data-album="Glass Houses" data-era="classic" data-mood="anthem" data-year="1980" data-genre="Rock" data-cover="images/home/album-04-bj.jpg">
           <img src="images/home/artist-04-bj.jpg" alt="Billy Joel">
         </div>
-        <div class="carousel-item" data-artist="J. Cole" data-album="Friday Night Lights" data-year="2010" data-genre="Hip-Hop (Mixtape)" data-cover="images/home/album-05-jc.jpg">
+        <div class="carousel-item" data-artist="J. Cole" data-album="Friday Night Lights" data-era="middle" data-mood="energy" data-year="2010" data-genre="Hip-Hop (Mixtape)" data-cover="images/home/album-05-jc.jpg">
           <img src="images/home/artist-05-jc.jpg" alt="J. Cole">
         </div>
-        <div class="carousel-item" data-artist="Tame Impala" data-album="Currents" data-year="2015" data-genre="Psychedelic Pop" data-cover="images/home/album-06-ti.jpg">
+        <div class="carousel-item" data-artist="Tame Impala" data-album="Currents" data-era="recent" data-mood="dreamy" data-year="2015" data-genre="Psychedelic Pop" data-cover="images/home/album-06-ti.jpg">
           <img src="images/home/artist-06-ti.jpg" alt="Tame Impala">
         </div>
-        <div class="carousel-item" data-artist="Lauryn Hill" data-album="The Miseducation of Lauryn Hill" data-year="1998" data-genre="Neo-Soul / Hip-Hop" data-cover="images/home/album-07-lh.jpg">
+        <div class="carousel-item" data-artist="Lauryn Hill" data-album="The Miseducation of Lauryn Hill" data-era="classic" data-mood="heart" data-year="1998" data-genre="Neo-Soul / Hip-Hop" data-cover="images/home/album-07-lh.jpg">
           <img src="images/home/artist-07-lh.jpg" alt="Lauryn Hill">
         </div>
-        <div class="carousel-item" data-artist="Pink Floyd" data-album="The Dark Side of the Moon" data-year="1973" data-genre="Progressive Rock" data-cover="images/home/album-08-pf.jpg">
+        <div class="carousel-item" data-artist="Pink Floyd" data-album="The Dark Side of the Moon" data-era="classic" data-mood="dreamy" data-year="1973" data-genre="Progressive Rock" data-cover="images/home/album-08-pf.jpg">
           <img src="images/home/artist-08-pf.jpg" alt="Pink Floyd">
         </div>
-        <div class="carousel-item" data-artist="Amy Winehouse" data-album="Back to Black" data-year="2006" data-genre="Soul / R&amp;B" data-cover="images/home/album-09-aw.jpg">
+        <div class="carousel-item" data-artist="Amy Winehouse" data-album="Back to Black" data-era="middle" data-mood="heart" data-year="2006" data-genre="Soul / R&amp;B" data-cover="images/home/album-09-aw.jpg">
           <img src="images/home/artist-09-aw.jpg" alt="Amy Winehouse">
         </div>
-        <div class="carousel-item" data-artist="The Black Skirts" data-album="THIRSTY" data-year="2019" data-genre="Indie Rock (Korea)" data-cover="images/home/album-10-bs.jpg">
+        <div class="carousel-item" data-artist="The Black Skirts" data-album="THIRSTY" data-era="recent" data-mood="heart" data-year="2019" data-genre="Indie Rock (Korea)" data-cover="images/home/album-10-bs.jpg">
           <img src="images/home/artist-10-bs.jpg" alt="The Black Skirts">
         </div>
-        <div class="carousel-item" data-artist="Frank Ocean" data-album="channel ORANGE" data-year="2012" data-genre="R&amp;B / Psychedelic Soul" data-cover="images/home/album-11-fo.jpg">
+        <div class="carousel-item" data-artist="Frank Ocean" data-album="channel ORANGE" data-era="middle" data-mood="dreamy" data-year="2012" data-genre="R&amp;B / Psychedelic Soul" data-cover="images/home/album-11-fo.jpg">
           <img src="images/home/artist-11-fo.jpg" alt="Frank Ocean">
         </div>
-        <div class="carousel-item" data-artist="SYSTEM SEOUL" data-album="SS-POP 3" data-year="2026" data-genre="Hyperpop / Digicore" data-cover="images/home/album-12-ss.jpg">
+        <div class="carousel-item" data-artist="SYSTEM SEOUL" data-album="SS-POP 3" data-era="recent" data-mood="energy" data-year="2026" data-genre="Hyperpop / Digicore" data-cover="images/home/album-12-ss.jpg">
           <img src="images/home/artist-12-ss.jpg" alt="SYSTEM SEOUL">
         </div>
         </div>
@@ -121,6 +122,87 @@
         </div>
       </div>
 
+    </section>
+
+    <!-- JAVASCRIPT PROGRAM (Sprint 3): "Find Your Album" quiz. The code is in recommend.js.
+         INPUT: three dropdown menus (era, mood, listening situation).
+         PROCESS: variables, if statements and a for loop go through the 12 carousel albums above
+                  (their data-era / data-mood attributes) and build the explanation text.
+         OUTPUT: when the user clicks "Recommend", the results appear in the text boxes below. -->
+    <section class="recommender" aria-labelledby="quiz-title">
+      <p class="eyebrow">Quiz</p>
+      <h2 id="quiz-title">Find Your Album</h2>
+      <p class="subtitle">Answer three quick questions and we will pick one of our twelve favorite albums for you.</p>
+
+      <form id="recommender" novalidate>
+        <!-- MATERIALIZE CSS: Grid (row / col) lays out the questions and the result boxes; Buttons for Recommend / Reset -->
+        <div class="row">
+          <div class="col s12 m4">
+            <label for="quiz-era">1. Which era feels right today?</label>
+            <select id="quiz-era" class="browser-default">
+              <option value="" selected disabled>Choose one</option>
+              <option value="classic">The classics (1973&ndash;1998)</option>
+              <option value="middle">2002&ndash;2012</option>
+              <option value="recent">2014 to today</option>
+              <option value="surprise">Surprise me</option>
+            </select>
+          </div>
+          <div class="col s12 m4">
+            <label for="quiz-mood">2. What do you need right now?</label>
+            <select id="quiz-mood" class="browser-default">
+              <option value="" selected disabled>Choose one</option>
+              <option value="energy">Pump-up energy</option>
+              <option value="heart">Heart on my sleeve</option>
+              <option value="dreamy">Dreamy and drifting</option>
+              <option value="anthem">Big anthems</option>
+            </select>
+          </div>
+          <div class="col s12 m4">
+            <label for="quiz-setting">3. Where are you listening?</label>
+            <select id="quiz-setting" class="browser-default">
+              <option value="" selected disabled>Choose one</option>
+              <option value="commute">Morning commute</option>
+              <option value="study">Study session</option>
+              <option value="roadtrip">Road trip</option>
+              <option value="night">Late night</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="quiz-actions">
+          <button type="submit" class="btn waves-effect waves-light">Recommend</button>
+          <button type="button" id="quiz-reset" class="btn-flat waves-effect">Reset</button>
+        </div>
+
+        <p id="quiz-message" class="quiz-message" role="status"></p>
+
+        <div class="row">
+          <div class="col s12 m6">
+            <label for="quiz-out-album">Album</label>
+            <input type="text" id="quiz-out-album" class="browser-default" readonly>
+          </div>
+          <div class="col s12 m6">
+            <label for="quiz-out-artist">Artist</label>
+            <input type="text" id="quiz-out-artist" class="browser-default" readonly>
+          </div>
+          <div class="col s12">
+            <label for="quiz-out-meta">Year and genre</label>
+            <input type="text" id="quiz-out-meta" class="browser-default" readonly>
+          </div>
+          <div class="col s12">
+            <label for="quiz-out-why">Why it fits</label>
+            <textarea id="quiz-out-why" class="browser-default" rows="3" readonly></textarea>
+          </div>
+          <div class="col s12 m6">
+            <label for="quiz-out-tip">Listening tip</label>
+            <textarea id="quiz-out-tip" class="browser-default" rows="3" readonly></textarea>
+          </div>
+          <div class="col s12 m6">
+            <label for="quiz-out-more">More in this mood</label>
+            <textarea id="quiz-out-more" class="browser-default" rows="3" readonly></textarea>
+          </div>
+        </div>
+      </form>
     </section>
 
   </main>

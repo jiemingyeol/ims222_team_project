@@ -135,3 +135,71 @@ main {
   margin: 0 0.5rem 0 0;
   background-color: var(--color-accent);
 }
+
+.recommender {
+  padding-top: 2.5rem;
+  border-top: 1px solid var(--color-border);
+}
+
+.recommender label {
+  display: block;
+  margin-bottom: 0.4rem;
+  font-weight: 700;
+}
+
+.recommender select,
+.recommender input[type="text"],
+.recommender textarea {
+  display: block;
+  width: 100%;
+  margin: 0 0 1rem;
+  padding: 0.6rem 0.75rem;
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  background: #ffffff;
+  color: var(--color-text);
+  font: inherit;
+  box-sizing: border-box;
+}
+
+.recommender textarea {
+  resize: none;
+}
+
+.recommender [readonly] {
+  background: var(--color-surface);
+}
+
+.quiz-actions {
+  display: flex;
+  gap: 0.75rem;
+  margin: 0.5rem 0 1rem;
+}
+
+.recommender .btn,
+.recommender .btn:hover,
+.recommender .btn:focus {
+  background-color: var(--color-accent);
+}
+
+.recommender .btn:hover {
+  background-color: #6e472e;
+}
+
+.recommender .btn-flat,
+.recommender .btn-flat:hover,
+.recommender .btn-flat:focus {
+  color: var(--color-text);
+  background-color: transparent;
+}
+
+.recommender .btn-flat:hover {
+  background-color: rgba(0, 0, 0, 0.06);
+}
+
+.quiz-message {
+  min-height: 1.5rem;
+  margin: 0 0 1rem;
+  font-weight: 700;
+  color: var(--color-accent);
+}
